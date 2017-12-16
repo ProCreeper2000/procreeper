@@ -1,0 +1,22 @@
+Function 1
+a = percentage / 100;
+b = a * number;
+Answer = b;
+
+
+Function 2
+a = number A
+b = (a / form.d.value) * 100
+Answer = b
+
+
+Function 3
+a = number A
+b = number B
+
+if a-b is less than 0
+	c = ((b - a) / a) * 100
+if a-b is greater than 0
+	c = ((a - b) / a) * 100
+
+Answer = c

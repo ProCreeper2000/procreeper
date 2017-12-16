@@ -1,0 +1,256 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Percentage Calculator</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<meta name="description" content="Take the guesswork out of percentage calculations!">
+<meta name="keywords" content="percent, percentage, calculate, %, calculator, calc">
+<meta name="author" content="Alan Ray D'sousa">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2567231794200405",
+    enable_page_level_ads: true
+  });
+</script>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+function calc1(form) {
+	a = form.a.value / 100;
+	b = a * form.b.value;
+	form.total1.value = b;
+}
+
+function calc2(form) {
+	a = form.c.value;
+	b = (a / form.d.value) * 100;
+	form.total2.value = b;
+}
+
+function calc3(form) {
+	a = form.e.value; //A = old num B = new num
+	b = form.f.value;
+	if (a-b < 0) {
+		c = ((b - a) / a) * 100;
+	} else {
+		c = ((a - b) / a) * 100;
+	}
+	form.total3.value = c;
+}
+
+function switchDarkMode(){;
+	var body = document.getElementById("body");
+	var currentClass = body.className;
+	body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+}
+//  End -->
+</script>
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/print.css" rel="stylesheet" type="text/css"  media="print">
+
+<script language="JavaScript" src="/misc_functions.js" type="text/javascript"></script>
+<!-- styles --->
+<style>
+body {
+	background: url(/gray_jean.jpg) repeat 0 0;
+    font: normal 8px Arial, sans-serif;
+	color: black;
+	transition: 1s;
+}
+h1 {
+    text-shadow: 3px 3px 6px #243f23;
+}
+p2 {
+    text-shadow: 1px 1px 3px #233b3f;
+}
+.box-shadow { 
+    box-shadow: 0 0 0.3em 0.3em #ccc;
+}
+
+input[type=text]{
+    border-radius: 3px;
+	transition: 0.4s;
+}
+input[type=text]:hover{
+	border-color:#92B8F5;
+	transition: 0.4s
+}
+input[type=text]:focus{
+	border-color:#2672EC;
+}
+
+
+input[type=button] {
+	background-color:#45c749;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:1px 6px;
+	text-decoration:none;
+	text-shadow:2px 2px 2px #2f6627;
+	transition: all 0.5s
+}
+input[type=button]:hover {
+	background-color:#40b844;
+	transform: scale(0.96, 0.96);
+	transition: all 0.5s
+}
+input[type=button]:active {
+	position:relative;
+	top:2px;
+}
+#formula-button {
+   	font-size:15.4px;
+	padding: 1px 3px;
+	border-radius: 2px;
+}
+
+
+img.logo {
+	transition: 0.5s;
+}
+img.logo:hover {
+	transform: scale(0.96, 0.96);
+	transition: 0.5s;
+}
+
+body.dark-mode{
+  background: url(/spacer.gif) repeat 0 0;
+  color: white;
+  transition: 1s;
+}
+
+table.box-shadow {
+    border-collapse: collapse;
+    border: 1px solid #34a500;
+}
+</style>
+</head>
+
+<body id="body" className="light-mode">
+<center>
+
+<!--[if lt IE 9]>
+    <div class="alert">
+	<p2 style="font-size:48"><b>UNSUPPORTED BROWSER</b> This website will not function as intended on Internet Explorer 8 or below!</p2>
+	</div>
+<![endif]-->
+
+<table border="0" cellpadding="3" cellspacing="0" width="692" id="mainbg"><tr><td>
+<!-- The above table places the 1 pixel gray outline around the whole page -->
+
+  <tr>
+  <td width="190" height="17" class="nav">&nbsp;&nbsp;<script language="JavaScript" type="text/javascript" src="/print_date.js"></script></td>
+
+<td width="500" height="17" align="right" class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
+</tr>
+
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="690">
+<tr>
+<td width="500" valign="top">
+<table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500" bordercolor="#269b00">
+<tr>
+
+<td width="500" valign="top" class="content">
+<div align="center">
+<a href="index.html"><img class="logo" src="logo.png" width="72" height="72" border="0" alt="Logo"></a> <h1 style="color:#34a500;font-family:verdana;"";><b>Percentage Calculator</b></h1>
+<span class="black"><p2 style="color:#1497e2;font-family:arial;font-size:19;"";><b>Take the guesswork out of percentage calculations!</b></h1></span>
+</div>
+
+<!-- Main data -->
+<script language="JavaScript" src="/browser_detection.js" type="text/javascript"></script>
+<noscript>
+<blockquote>
+<p><font size="3" face="arial" color="#FF0000"><b>You do not have JavaScript enabled.</b></font><br>
+<font size="2" face="arial" color="#000080">The script on this site require the use of JavaScript so enable it before continuing, or the website will not function as intended.</font></p>
+</blockquote>
+</noscript>
+
+<p>&nbsp;</p>
+    <form name="form1">
+      <div align="center"><center><table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
+        <tr>
+          <td align="center">What is <input type="text" name="a" size="12"> % of<br><input type="text" name="b" size="12">?<br><input type="button" value="Calculate" onClick="calc1(this.form)"></td>
+          <td align="center">Answer<br><input type="text" name="total1" size="15" maxlength="40" READONLY></td>
+        </tr>
+        <tr>
+          <td align="center" colspan="3" align="center">Or</td>
+        </tr>
+        <tr>
+          <td align="center"><input type="text" name="c" size="12"><br>is what percent of<br><input type="text" name="d" size="12">?<br><input type="button" value="Calculate" onClick="calc2(this.form)"></td>
+          <td align="center">Answer<br><input type="text" name="total2" size="14" READONLY>%</td>
+        </tr>
+		<tr>
+          <td align="center" colspan="3" align="center">Or</td>
+        </tr>
+        <tr>
+          <td align="center">What is the percentage increase/decrease from <input type="text" name="e" size="12"><br>to<br><input type="text" name="f" size="12">?<br><input type="button" value="Calculate" onClick="calc3(this.form)"></td>
+          <td align="center">Answer<br><input type="text" name="total3" size="14" READONLY>%</td>
+        </tr>
+      </table>
+      </center></div>
+    </form>
+
+<!-- Center Bottom -->
+</td></tr></table>
+<table border="0" cellpadding="0" cellspacing="0" width="500">
+<tr><td width="500" valign="top" class="content">
+<center>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Homepage Bottom -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-2567231794200405"
+     data-ad-slot="6161957371"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</center>
+<!-- End Center Bottom -->
+
+</td>
+</tr>
+</table>
+
+</td>
+
+<td width="5" bgcolor="#777777" valign="top"><img src="spacer.gif" width="1" height="2" alt="" border="0"></td>
+
+<td width="190" valign="top" class="rightside">
+<!-- Right side Start -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr> 
+<td align="center" id="rcontainer"><br>Bookmark this page! It may come in handy.<br><br>Thanks for visiting!<br><br><a href="formulas.txt"><input type="button" id="formula-button" value="Formulas"></a> <br><br> <input type="button" id="darkmode-button" value="Toggle dark mode" onClick="switchDarkMode()"></td>
+</tr>
+</table>
+
+<script language="Javascript" type="text/javascript">
+
+</div>
+
+<!--Bottom Right--->
+<table border="0" cellpadding="5" cellspacing="0" width="690">
+<td width="250" height="17" align="right" class="footer">&copy; Copyright 2017-2017 <a href="/">Alan Ray D'souza</a>.</td>
+</tr>
+
+<br> 
+</center>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Step 1: Calculate voltage drop needed.
+Start Voltage - Voltage Requirement = Voltage Drop (V)
+
+Step 2: Calculate resistance.
+R = V / I
+R = Resistance (Ohms)
+V = Voltage drop
+I = Current (Amps)
+
+Step 3: Calculate wattage.
+P = (I ^ 2) * R
+P = Minimum Wattage
