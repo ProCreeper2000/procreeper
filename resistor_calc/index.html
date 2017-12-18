@@ -26,8 +26,7 @@ function calc1(form) {
 	i = form.amps.value;
 	
 	if (volt - gvolt < 0) {
-		alert("Oh you silly boy... you can't increase voltage with resistors!")
-		return;
+		return alert("Oh you silly boy... you can't increase voltage with resistors!");
 	}
 	if (i == 0 || i == null) {
 		alert("Hmm? No current usage? Impossible...");
