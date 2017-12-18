@@ -18,9 +18,13 @@
 
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 <!--
-var fs = require("fs");
-var text = fs.readFileSync("./mytext.txt", "utf-8");
-var words = text.split("\n");
+var client = new XMLHttpRequest();
+client.open('GET', '/foo.txt');
+client.onreadystatechange = function() {
+  alert(client.responseText);
+}
+client.send();
+var words = client.split("\n");
 function shuffle(a) {
 	var j, x, i;
 	for (i = a.length; i; i--) {
