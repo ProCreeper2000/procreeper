@@ -18,10 +18,9 @@
 
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 <!--
-var fso, ts,s;
-fso = new ActiveXObject("Scripting.FileSystemObject");
-f1 = fso.OpenTextFile("c:\\testfile.txt", 1);
-var words = ts.ReadLine();
+var fs = require("fs");
+var text = fs.readFileSync("./mytext.txt");
+var words = text.split("\n");
 function shuffle(a) {
 	var j, x, i;
 	for (i = a.length; i; i--) {
