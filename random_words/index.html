@@ -16,15 +16,11 @@
   });
 </script>
 
+<script src="words.txt"></script>
+	
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 <!--
-var client = new XMLHttpRequest();
-client.open('GET', '/words.txt');
-client.onreadystatechange = function() {
-  alert(client.responseText);
-}
-client.send();
-var words = client.split("\n");
+var words = wordsList.split("\n");
 function shuffle(a) {
 	var j, x, i;
 	for (i = a.length; i; i--) {
