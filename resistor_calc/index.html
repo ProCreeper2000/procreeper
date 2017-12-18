@@ -25,13 +25,8 @@ function calc1(form) {
 	v = volt - gvolt;
 	i = form.amps.value;
 	
-	if (volt - gvolt < 0) {
-		return alert("Oh you silly boy... you can't increase voltage with resistors!");
-	}
-	if (i == 0 || i == null) {
-		alert("Hmm? No current usage? Impossible...");
-		return;
-	}
+	if (volt - gvolt < 0) {return alert("I think you'll need a step-up converter for that...");}
+	if (i == 0 || i == null) {return alert("Nice! You've got stuff that doesn't use any current, huh?");}
 	
 	form.ohms.value = v / i;
 	form.watts.value = Math.pow(i, 2) * form.ohms.value;
