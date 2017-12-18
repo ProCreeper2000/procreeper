@@ -1,4 +1,4 @@
-let wordsList =  `
+let text = `
 aardvark
 aardwolf
 aaron
