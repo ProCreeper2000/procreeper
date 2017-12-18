@@ -36,13 +36,13 @@ function generate(form) {
 	var num = form.number.value;
 	
 	if (num == 0 || num == null) {
-		alert("If you want to have no random words, just type nothing! :)");
+		alert("If you want to have no random words, just type nothing! There's your 0 random words! :)");
 		return;
 	}
 	
 	for(i=0; i<num; i++) {
 		var word = words[Math.floor(Math.random() * words.length)];
-		result = result + " " + word;
+		result = result + word + " ";
 	}
 	form.result.value = result;
 }
@@ -189,7 +189,7 @@ table.box-shadow {
       <div align="center"><center><table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
         <tr>
           <td align="center">Amount of words: <input type="number" name="number" size="5"><br><input type="button" value="Generate!" onClick="generate(this.form)"></td>
-          <td align="center"><textarea name="result" rows="10" cols="30" READONLY>Your words will appear here!</textarea></td>
+          <td align="center">Result<br><textarea name="result" rows="10" cols="30" READONLY>Your words will appear here!</textarea></td>
         </tr>
       </table>
       </center></div>
