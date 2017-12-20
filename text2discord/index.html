@@ -27,8 +27,8 @@ function textToDiscord(form) {
 	else
 		out += text.charAt(i);
 	}
-	if (out.length > 2000) alert("Output is more than 2,000 characters, you will need to post it in multiple messages.");
 	form.result.value = out;
+	if (out.length > 2000) alert("Output is more than 2,000 characters, you will need to post it in multiple messages.");
 }
 
 function switchDarkMode(){;
