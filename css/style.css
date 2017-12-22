@@ -72,8 +72,4 @@ table.box-shadow {
     border: 1px solid #000;
 }
 
- #formula-button {
-    	font-size:15.4px;
- 	padding: 1px 3px;
-	border-color:#cfdd00;
- }
+ #formula-button {font-size:15.4px; padding: 1px 3px; background-color:#cfdd00;}
