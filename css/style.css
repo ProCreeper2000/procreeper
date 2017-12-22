@@ -54,6 +54,7 @@ input[type=button]:active {
 }
 .formula-button {
 	padding:0px 1px;
+	background-color:#fff;
 }
 
 img.logo {
