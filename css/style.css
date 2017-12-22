@@ -42,7 +42,7 @@ input[type=button] {
 	text-decoration:none;
 	text-shadow:2px 2px 2px #2f6627;
 	transition: all 0.5s
-}
+}.formula-button {padding:0px 1px;}
 input[type=button]:hover {
 	background-color:#40b844;
 	transform: scale(0.96, 0.96);
@@ -70,9 +70,4 @@ body.dark-mode{
 table.box-shadow {
     border-collapse: collapse;
     border: 1px solid #000;
-}
-
-input[type=button].formula-button {
-	padding:0px 0px;
-		background-color:#000;
 }
