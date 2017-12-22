@@ -73,5 +73,6 @@ table.box-shadow {
 }
 
 input[type=button].formula-button {
-	padding:0px 1px;
+	padding:0px 0px;
+		background-color:#000;
 }
