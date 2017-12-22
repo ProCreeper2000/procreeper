@@ -43,7 +43,6 @@ input[type=button] {
 	text-shadow:2px 2px 2px #2f6627;
 	transition: all 0.5s
 }
-.formula-button {padding:0px 1px;}
 input[type=button]:hover {
 	background-color:#40b844;
 	transform: scale(0.96, 0.96);
@@ -52,6 +51,9 @@ input[type=button]:hover {
 input[type=button]:active {
 	position:relative;
 	top:2px;
+}
+.formula-button {
+	padding:0px 1px;
 }
 
 img.logo {
