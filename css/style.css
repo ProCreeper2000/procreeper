@@ -52,11 +52,6 @@ input[type=button]:active {
 	position:relative;
 	top:2px;
 }
- #formula-button {
-    	font-size:15.4px;
- 	padding: 1px 3px;
-	border-color:#cfdd00;
- }
 
 img.logo {
 	transition: 0.5s;
@@ -76,3 +71,9 @@ table.box-shadow {
     border-collapse: collapse;
     border: 1px solid #000;
 }
+
+ #formula-button {
+    	font-size:15.4px;
+ 	padding: 1px 3px;
+	border-color:#cfdd00;
+ }
