@@ -71,3 +71,7 @@ table.box-shadow {
     border-collapse: collapse;
     border: 1px solid #000;
 }
+
+input[type=button].formula-button {
+	padding:1px 3px;
+}
