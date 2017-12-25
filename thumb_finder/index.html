@@ -63,7 +63,7 @@ function openLink(a) {
 function copyLink(a) {
       var dummy = document.createElement("input");
       document.body.appendChild(dummy);
-      $(dummy).css('display','none');
+      ${dummy}.css('display','none');
       dummy.setAttribute("id", "dummy_id");
       document.getElementById("dummy_id").value=a;
       dummy.select();
