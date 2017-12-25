@@ -1,6 +1,6 @@
 body {
 	background: url(/gray_jean.jpg) repeat 0 0;
-    font: normal 8px Arial, sans-serif;
+	font: normal 8px Arial, sans-serif;
 	color: black;
 	transition: 1s;
 }
@@ -81,20 +81,6 @@ body.dark-mode{
   background: url(/spacer.gif) repeat 0 0;
   color: white;
   transition: 1s;
-}
-/* unvisited link */
-body.dark-mode:link {
-    color: red;
-}
-
-/* visited link */
-body.dark-mode:visited {
-    color: green;
-}
-
-/* mouse over link */
-body.dark-mode:hover {
-    color: hotpink;
 }
 
 
