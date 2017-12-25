@@ -60,10 +60,10 @@ function openLink(a) {
 	}
 }
 
-function copyLink(a) {
-	a.select();
+function copyLink(form) {
+	form.result1.select();
 	document.execCommand("Copy");
-	alert("Copied link: " + a);
+	alert("Copied link: " + form.result1.value);
 }
 
 function switchDarkMode(){;
@@ -122,11 +122,11 @@ function switchDarkMode(){;
 			<td align="center">Video link:<br><input type="text" name="link1" size="50"><br><input type="button" value="Create Links" onClick="parse1(this.form)"></td>
         </tr>
         <tr>
-			<td align="center">Result<br><br>Max Res [maxresdefault.jpg]<input type="text" name="result1" size="50" maxlength="40" id="result1" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result1')"><input type="button" value="Copy Link" onClick="copyLink('result1')">
-			<br><br>Standard Definition (640x480) [sddefault.jpg]<input type="text" name="result2" size="50" maxlength="40" id="result2" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result2')"><input type="button" value="Copy Link" onClick="copyLink('result1')">
-			<br><br>High Quality (480x360) [hqdefault.jpg]<input type="text" name="result3" size="50" maxlength="40" id="result3" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result3')"><input type="button" value="Copy Link" onClick="copyLink('result1')">
-			<br><br>Medium Quality (320x180) [mqdefault.jpg]<input type="text" name="result4" size="50" maxlength="40" id="result4" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result4')"><input type="button" value="Copy Link" onClick="copyLink('result1')">
-			<br><br>Default (120x90) [default.jpg]<input type="text" name="result5" size="50" maxlength="40" id="result5" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result5')"><input type="button" value="Copy Link" onClick="copyLink('result1')">
+			<td align="center">Result<br><br>Max Res [maxresdefault.jpg]<input type="text" name="result1" size="50" maxlength="40" id="result1" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result1')"><input type="button" value="Copy Link" onClick="copyLink('this.form')">
+			<br><br>Standard Definition (640x480) [sddefault.jpg]<input type="text" name="result2" size="50" maxlength="40" id="result2" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result2')"><input type="button" value="Copy Link" onClick="copyLink('this.form')">
+			<br><br>High Quality (480x360) [hqdefault.jpg]<input type="text" name="result3" size="50" maxlength="40" id="result3" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result3')"><input type="button" value="Copy Link" onClick="copyLink('this.form')">
+			<br><br>Medium Quality (320x180) [mqdefault.jpg]<input type="text" name="result4" size="50" maxlength="40" id="result4" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result4')"><input type="button" value="Copy Link" onClick="copyLink('this.form')">
+			<br><br>Default (120x90) [default.jpg]<input type="text" name="result5" size="50" maxlength="40" id="result5" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result5')"><input type="button" value="Copy Link" onClick="copyLink('this.form')">
 					
 			</td>
         </tr>
