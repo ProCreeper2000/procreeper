@@ -29,11 +29,14 @@
 
 <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
 function textToDiscord(form) {
-	text = form.text.value.toLowerCase();
+    text = form.text.value.toLowerCase();
+    numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 	out = "";
 	for (var i = 0, len = text.length; i < len; i++) {
 	if (text.charAt(i).match(/^[a-zA-Z]*$/, text.charAt(i)))
-		out += ':regional_indicator_' + text.charAt(i) + ': ';
+        out += ':regional_indicator_' + text.charAt(i) + ': ';
+    else if (text.charAt(i).match(/^[0-9]*$/, text.charAt(i)))
+        out += ":" + numbers[text.charAt(i)] + ": "
 	else
 		out += text.charAt(i);
 	}
