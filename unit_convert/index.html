@@ -2,423 +2,446 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Unit Converter</title>
-<link rel="shortcut icon" href="favicon.ico" />
-<meta name="description" content="Quickly and easily convert units!">
-<meta name="keywords" content="length, unit, convert, to, temperature, degrees, area, volume, liquid, weight, mile, yard, foot, inch, km, m, cm, mm, kilometer, meter, centimeter, millimeter">
-<meta name="author" content="Alan Ray D'sousa">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Unit Converter</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="description" content="Quickly and easily convert units!">
+    <meta name="keywords" content="length, unit, convert, to, temperature, degrees, area, volume, liquid, weight, mile, yard, foot, inch, km, m, cm, mm, kilometer, meter, centimeter, millimeter">
+    <meta name="author" content="Alan Ray D'sousa">
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-2567231794200405",
-    enable_page_level_ads: true
-  });
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2567231794200405",
+            enable_page_level_ads: true
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-111410202-1');
-</script>
-
-
-<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-var dict = {
-//----------unit: meter
-"gigameter":1000000000,
-"megameter":1000000,
-"kilometer":1000,
-"meter":1,
-"centimeter":0.01,
-"millimeter":0.001,
-"naut-mile":1852,
-"mile":1609.344,
-"yard":0.9144,
-"foot":0.3048,
-"inch":0.0254,
-"thou":0.0000254,
-//----------unit: kilogram
-"tonne":1000,
-"kilogram":1,
-"gram":0.001,
-"milligram":0.000001,
-"long-ton":1016.0469088,
-"short-ton":907.18474,
-"stone":6.35029318,
-"pound":0.45359237,
-"ounce":0.028349523125,
-//----------unit: liter
-"cu-m":1000,
-"cu-cm":0.001,
-"liter":1,
-"centiliter":0.01,
-"milliliter":0.001,
-"cu-yd":764.55485798,
-"cu-ft":28.316846592,
-"cu-in":0.016387064,
-"gallon":3.785411784,
-"quart":0.946352946,
-"pint":0.473176473,
-"cup":0.24,
-"floz":0.0295735295625,
-"tbsp":0.0147868,
-"tsp":0.00492892,
-"igallon":4.54609,
-"iquart":1.1365225,
-"ipint":0.56826125,
-"icup":0.284131,
-"ifloz":0.0284130625,
-"itbsp":0.0177582,
-"itsp":0.00591939,
-//----------unit: sq.km
-"sq-km":1,
-"sq-m":0.000001,
-"sq-cm":0.0000000001,
-"hectare":0.01,
-"are":0.0001,
-"sq-mi":2.589988110336,
-"sq-yd":0.00000083612736,
-"sq-ft":0.00000009290304,
-"sq-in":0.00000000064516,
-"acre":0.0040468564224,
-}
+        gtag('config', 'UA-111410202-1');
+    </script>
 
 
-function calc1(form) {
-	unit1 = form.unit1.value;
-    unit2 = form.unit2.value;
+    <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+        var dict = {
+            //----------unit: meter
+            "gigameter": 1000000000,
+            "megameter": 1000000,
+            "kilometer": 1000,
+            "meter": 1,
+            "centimeter": 0.01,
+            "millimeter": 0.001,
+            "naut-mile": 1852,
+            "mile": 1609.344,
+            "yard": 0.9144,
+            "foot": 0.3048,
+            "inch": 0.0254,
+            "thou": 0.0000254,
+            //----------unit: kilogram
+            "tonne": 1000,
+            "kilogram": 1,
+            "gram": 0.001,
+            "milligram": 0.000001,
+            "long-ton": 1016.0469088,
+            "short-ton": 907.18474,
+            "stone": 6.35029318,
+            "pound": 0.45359237,
+            "ounce": 0.028349523125,
+            //----------unit: liter
+            "cu-m": 1000,
+            "cu-cm": 0.001,
+            "liter": 1,
+            "centiliter": 0.01,
+            "milliliter": 0.001,
+            "cu-yd": 764.55485798,
+            "cu-ft": 28.316846592,
+            "cu-in": 0.016387064,
+            "gallon": 3.785411784,
+            "quart": 0.946352946,
+            "pint": 0.473176473,
+            "cup": 0.24,
+            "floz": 0.0295735295625,
+            "tbsp": 0.0147868,
+            "tsp": 0.00492892,
+            "igallon": 4.54609,
+            "iquart": 1.1365225,
+            "ipint": 0.56826125,
+            "icup": 0.284131,
+            "ifloz": 0.0284130625,
+            "itbsp": 0.0177582,
+            "itsp": 0.00591939,
+            //----------unit: sq.km
+            "sq-km": 1,
+            "sq-m": 0.000001,
+            "sq-cm": 0.0000000001,
+            "hectare": 0.01,
+            "are": 0.0001,
+            "sq-mi": 2.589988110336,
+            "sq-yd": 0.00000083612736,
+            "sq-ft": 0.00000009290304,
+            "sq-in": 0.00000000064516,
+            "acre": 0.0040468564224,
+        }
 
-	form.result1.value = (dict[unit1]/dict[unit2]) * form.num1.value;
-}
 
-function calc2(form) {
-	unit3 = form.unit3.value;
-    unit4 = form.unit4.value;
+        function calc1(form) {
+            unit1 = form.unit1.value;
+            unit2 = form.unit2.value;
 
-	form.result2.value = (dict[unit3]/dict[unit4]) * form.num2.value;
-}
+            form.result1.value = (dict[unit1] / dict[unit2]) * form.num1.value;
+        }
 
-function calc3(source, form) {
-	var celsius = form.num3;
-	var fahrenheit = form.num4;
-	var kelvin = form.num5;
-	if (source=="ce") {
-		fahrenheit.value = (celsius.value * 1.8) + 32;
-		kelvin.value = celsius.value * 1 + 273.15; <!-- Multiply by 1 to conert datatype-->
-	}
-	if (source== "fa") {
-		celsius.value = (fahrenheit.value-32) / 1.8;
-		kelvin.value = ((fahrenheit.value-32) / 1.8) + 273.15;
-	}
-	if (source=="ke") {
-		fahrenheit.value = ((kelvin.value - 273.15) * 1.8) +32;
-		celsius.value=valNum - kelvin.value - 273.15;
-	}
+        function calc2(form) {
+            unit3 = form.unit3.value;
+            unit4 = form.unit4.value;
 
-}
+            form.result2.value = (dict[unit3] / dict[unit4]) * form.num2.value;
+        }
 
-function calc4(form) {
-	unit6 = form.unit6.value;
-    unit7 = form.unit7.value;
+        function calc3(source, form) {
+            var celsius = form.num3;
+            var fahrenheit = form.num4;
+            var kelvin = form.num5;
+            if (source == "ce") {
+                fahrenheit.value = (celsius.value * 1.8) + 32;
+                kelvin.value = celsius.value * 1 + 273.15; <!--Multiply by 1 to conert datatype-- >
+        }
+            if (source == "fa") {
+                celsius.value = (fahrenheit.value - 32) / 1.8;
+                kelvin.value = ((fahrenheit.value - 32) / 1.8) + 273.15;
+            }
+            if (source == "ke") {
+                fahrenheit.value = ((kelvin.value - 273.15) * 1.8) + 32;
+                celsius.value = valNum - kelvin.value - 273.15;
+            }
 
-	form.result4.value = (dict[unit6]/dict[unit7]) * form.num6.value;
-}
+        }
 
-function calc5(form) {
-	unit8 = form.unit8.value;
-    unit9 = form.unit9.value;
+        function calc4(form) {
+            unit6 = form.unit6.value;
+            unit7 = form.unit7.value;
 
-	form.result5.value = (dict[unit8]/dict[unit9]) * form.num7.value;
-}
+            form.result4.value = (dict[unit6] / dict[unit7]) * form.num6.value;
+        }
 
-function switchDarkMode(){;
-	var body = document.getElementById("body");
-	var currentClass = body.className;
-	body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
-}
-</script>
+        function calc5(form) {
+            unit8 = form.unit8.value;
+            unit9 = form.unit9.value;
 
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+            form.result5.value = (dict[unit8] / dict[unit9]) * form.num7.value;
+        }
+
+        function switchDarkMode() {
+            ;
+            var body = document.getElementById("body");
+            var currentClass = body.className;
+            body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+        }
+    </SCRIPT>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body id="body" className="light-mode">
-<center>
+    <center>
 
-<!--[if lt IE 9]>
-    <div class="alert">
-	<p2 style="font-size:48"><b>UNSUPPORTED BROWSER</b> This website will not function as intended on Internet Explorer 8 or below!</p2>
-	</div>
-<![endif]-->
+        <!--[if lt IE 9]>
+            <div class="alert">
+            <p2 style="font-size:48"><b>UNSUPPORTED BROWSER</b> This website will not function as intended on Internet Explorer 8 or below!</p2>
+            </div>
+        <![endif]-->
 
-<table border="0" cellpadding="3" cellspacing="0" width="692" id="mainbg"><tr><td>
-<!-- The above table places the 1 pixel gray outline around the whole page -->
+        <table border="0" cellpadding="3" cellspacing="0" width="692" id="mainbg">
+            <tr>
+                <td>
+                    <!-- The above table places the 1 pixel gray outline around the whole page -->
 
-<tr>
-<td width="500" height="17" align="right" class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
+            <tr>
+                <td width="500" height="17" align="right" class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
+            </tr>
+
+        </table>
+
+        <table border="0" cellspacing="0" cellpadding="0" width="690">
+            <tr>
+                <td width="500" valign="top">
+                    <table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500" bordercolor="#ad42f4">
+                        <tr>
+
+                            <td width="500" valign="top" class="content">
+                                <div align="center">
+                                    <a href="index.html"><img class="logo" src="logo.png" width="72" height="72" border="0" alt="Logo"></a> <h1 style="color:#005491;font-family:verdana;" ";><b>Unit Converter</b></h1>
+                                    <span class="black"><p2 style="color:#2d16bf;font-family:arial;font-size:19;" ";><b>Quickly and easily convert units!</b></h1></span>
+                                </div>
+
+                                <!-- Main data -->
+
+                                <noscript>
+                                    <blockquote>
+                                        <p>
+                                            <font size="3" face="arial" color="#FF0000"><b>You do not have JavaScript enabled.</b></font><br>
+                                            <font size="2" face="arial" color="#000080">The script on this site require the use of JavaScript so enable it before continuing, or the website will not function as intended.</font>
+                                        </p>
+                                    </blockquote>
+                                </noscript>
+
+                                <p>&nbsp;</p>
+                                <form name="form1">
+                                    <div align="center">
+                                        <center>
+                                            <table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
+                                                <tr>
+                                                    <td align="center" colspan="3" align="center">To convert lengths,</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <select name="unit1">
+                                                            <option value="gigameter">Gigameter (Gm)</option>
+                                                            <option value="megameter">Megameter (Mm)</option>
+                                                            <option value="kilometer">Kilometer (km)</option>
+                                                            <option value="meter">Meter (m)</option>
+                                                            <option value="centimeter">Centimeter (cm)</option>
+                                                            <option value="millimeter">Millimeter (mm)</option>
+                                                            <option value="naut-mile">Nautical mile (nmi, nm, M)</option>
+                                                            <option value="mile">Mile (mi)</option>
+                                                            <option value="yard">Yard (yd)</option>
+                                                            <option value="foot" selected>Foot (ft)</option>
+                                                            <option value="inch">Inch (in)</option>
+                                                            <option value="thou">Thou (mil)</option>
+                                                        </select>
+                                                        <br><input type="number" name="num1" size="15">
+                                                        <br>To<br><select name="unit2">
+                                                            <option value="gigameter">Gigameter (Gm)</option>
+                                                            <option value="megameter">Megameter (Mm)</option>
+                                                            <option value="kilometer">Kilometer (km)</option>
+                                                            <option value="meter" selected>Meter (m)</option>
+                                                            <option value="centimeter">Centimeter (cm)</option>
+                                                            <option value="millimeter">Millimeter (mm)</option>
+                                                            <option value="naut-mile">Nautical mile (nmi)</option>
+                                                            <option value="mile">Mile (mi)</option>
+                                                            <option value="yard">Yard (yd)</option>
+                                                            <option value="foot">Foot (ft)</option>
+                                                            <option value="inch">Inch (in)</option>
+                                                            <option value="thou">Thou (mil)</option>
+                                                        </select>
+                                                        <br><input type="button" value="Calculate" onClick="calc1(this.form)">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        Result<br><input type="number" name="result1" size="20" maxlength="40" id="result1" READONLY>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" colspan="3" align="center">To convert weights,</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <select name="unit3">
+                                                            <option value="tonne">Metric Tonne (t)</option>
+                                                            <option value="kilogram">Kilogram (kg)</option>
+                                                            <option value="gram">Gram (g)</option>
+                                                            <option value="milligram">Milligram (mg)</option>
+                                                            <option value="long-ton">Long Ton (Imperial)</option>
+                                                            <option value="short-ton">Short Ton (US)</option>
+                                                            <option value="stone">Stone (st)</option>
+                                                            <option value="pound" selected>Pound (lb)</option>
+                                                            <option value="ounce">Ounce (oz)</option>
+                                                        </select>
+                                                        <br><input type="number" name="num2" size="15">
+                                                        <br>To<br><select name="unit4">
+                                                            <option value="tonne">Metric Tonne (t)</option>
+                                                            <option value="kilogram" selected>Kilogram (kg)</option>
+                                                            <option value="gram">Gram (g)</option>
+                                                            <option value="milligram">Milligram (mg)</option>
+                                                            <option value="long-ton">Long Ton (Imperial)</option>
+                                                            <option value="short-ton">Short Ton (US)</option>
+                                                            <option value="stone">Stone (st)</option>
+                                                            <option value="pound">Pound (lb)</option>
+                                                            <option value="ounce">Ounce (oz)</option>
+                                                        </select>
+                                                        <br><input type="button" value="Calculate" onClick="calc2(this.form)">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        Result<br><input type="number" name="result2" size="20" maxlength="40" id="result2" READONLY>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" colspan="3" align="center">To convert temperature,</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        Celsius (°C)<input type="number" id="ce" name="num3" size="10" oninput="calc3(this.id, this.form)" onchange="calc3(this.name, this.form)"> <br>
+                                                        Fahrenheit (°F)<input type="number" id="fa" name="num4" size="10" oninput="calc3(this.id, this.form)" onchange="calc3(this.name, this.form)"> <br>
+                                                        Kelvin (K)<input type="number" id="ke" name="num5" size="10" oninput="calc3(this.id, this.form)" onchange="calc3(this.name, this.form)"> <br>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" colspan="3" align="center">To convert volume,</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <select name="unit6">
+                                                            <option value="cu-m">Cubic Meter (m³)</option>
+                                                            <option value="cu-cm">Cubic Centimeter (cm³)</option>
+                                                            <option value="liter">Liter (l)</option>
+                                                            <option value="centiliter">Centiliter (cl)</option>
+                                                            <option value="milliliter">Milliliter (ml)</option>
+                                                            <option value="cu-yd">Cubic Yard (yd³)</option>
+                                                            <option value="cu-ft">Cubic Foot (ft³)</option>
+                                                            <option value="cu-in">Cubic Inch (in³)</option>
+                                                            <option value="gallon" selected>US gallon</option>
+                                                            <option value="quart">US quart (qt)</option>
+                                                            <option value="pint">US pint (p/pt)</option>
+                                                            <option value="cup">US cup</option>
+                                                            <option value="floz">US fluid ounce (fl oz)</option>
+                                                            <option value="tbsp">US tablespoon (tbsp)</option>
+                                                            <option value="tsp">US teaspoon (tsp)</option>
+                                                            <option value="igallon">Imperial gallon</option>
+                                                            <option value="iquart">Imperial quart (qt)</option>
+                                                            <option value="ipint">Imperial pint (p/pt)</option>
+                                                            <option value="icup">Imperial cup</option>
+                                                            <option value="ifloz">Imperial fluid ounce (fl oz)</option>
+                                                            <option value="itbsp">Imperial tablespoon (tbsp)</option>
+                                                            <option value="itsp">Imperial teaspoon (tsp)</option>
+                                                        </select>
+                                                        <br><input type="number" name="num6" size="15">
+                                                        <br>To<br><select name="unit7">
+                                                            <option value="cu-m">Cubic Meter (m³)</option>
+                                                            <option value="cu-cm">Cubic Centimeter (cm³)</option>
+                                                            <option value="liter" selected>Liter (l)</option>
+                                                            <option value="centiliter">Centiliter (cl)</option>
+                                                            <option value="milliliter">Milliliter (ml)</option>
+                                                            <option value="cu-yd">Cubic Yard (yd³)</option>
+                                                            <option value="cu-ft">Cubic Foot (ft³)</option>
+                                                            <option value="cu-in">Cubic Inch (in³)</option>
+                                                            <option value="gallon">US gallon</option>
+                                                            <option value="quart">US quart (qt)</option>
+                                                            <option value="pint">US pint (p/pt)</option>
+                                                            <option value="cup">US cup</option>
+                                                            <option value="floz">US fluid ounce (fl oz)</option>
+                                                            <option value="tbsp">US tablespoon (tbsp)</option>
+                                                            <option value="tsp">US teaspoon (tsp)</option>
+                                                            <option value="i-gallon">Imperial gallon</option>
+                                                            <option value="i-quart">Imperial quart (qt)</option>
+                                                            <option value="i-pint">Imperial pint (p/pt)</option>
+                                                            <option value="i-cup">Imperial cup</option>
+                                                            <option value="i-floz">Imperial fluid ounce (fl oz)</option>
+                                                            <option value="i-tbsp">Imperial tablespoon (tbsp)</option>
+                                                            <option value="i-tsp">Imperial teaspoon (tsp)</option>
+                                                        </select>
+                                                        <br><input type="button" value="Calculate" onClick="calc4(this.form)">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        Result<br><input type="number" name="result4" size="20" maxlength="40" id="result4" READONLY>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" colspan="3" align="center">To convert area,</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        <select name="unit8">
+                                                            <option value="sq-km" selected>Sq. kilometer (km²)</option>
+                                                            <option value="sq-m">Sq. meter (m²)</option>
+                                                            <option value="sq-cm">Sq. centimeter (cm²)</option>
+                                                            <option value="hectare">Hectare</option>
+                                                            <option value="are">Are</option>
+                                                            <option value="sq-mi">Sq. mile (mi²)</option>
+                                                            <option value="sq-yd">Sq. yard (yd²)</option>
+                                                            <option value="sq-ft">Sq. foot (ft²)</option>
+                                                            <option value="sq-in">Sq. inch (in²)</option>
+                                                            <option value="acre">Acre</option>
+
+                                                        </select>
+                                                        <br><input type="number" name="num7" size="15">
+                                                        <br>To<br><select name="unit9">
+                                                            <option value="sq-km">Sq. kilometer (km²)</option>
+                                                            <option value="sq-m">Sq. meter (m²)</option>
+                                                            <option value="sq-cm">Sq. centimeter (cm²)</option>
+                                                            <option value="hectare">Hectare</option>
+                                                            <option value="are">Are</option>
+                                                            <option value="sq-mi" selected>Sq. mile (mi²)</option>
+                                                            <option value="sq-yd">Sq. yard (yd²)</option>
+                                                            <option value="sq-ft">Sq. foot (ft²)</option>
+                                                            <option value="sq-in">Sq. inch (in²)</option>
+                                                            <option value="acre">Acre</option>
+                                                        </select>
+                                                        <br><input type="button" value="Calculate" onClick="calc5(this.form)">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">
+                                                        Result<br><input type="number" name="result5" size="20" maxlength="40" id="result5" READONLY>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </center>
+                                    </div>
+                                </form>
+
+                                <!-- Center Bottom -->
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" width="500">
+                        <tr>
+                            <td width="500" valign="top" class="content">
+                                <center>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+
+                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- Homepage Bottom -->
+                                    <ins class="adsbygoogle"
+                                         style="display:inline-block;width:320px;height:100px"
+                                         data-ad-client="ca-pub-2567231794200405"
+                                         data-ad-slot="6161957371"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+
+                                </center>
+                                <!-- End Center Bottom -->
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+
+                <td width="5" bgcolor="#777777" valign="top"><img src="spacer.gif" width="1" height="2" alt="" border="0"></td>
+
+                <td width="190" valign="top" class="rightside">
+                    <!-- Right side Start -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td align="center" id="rcontainer"><br>Bookmark this page! It may come in handy.<br><br>Thanks for visiting!<br><br><input type="button" id="darkmode-button" value="Toggle dark mode" onClick="switchDarkMode()"></td>
+                        </tr>
+                    </table>
+
+                    <script language="Javascript" type="text/javascript">
+
+</div >
+
+<!--Bottom Right-- ->
+                                <table border="0" cellpadding="5" cellspacing="0" width="690">
+                                    <td width="250" height="17" align="right" class="footer">&copy; Copyright 2017-2017 <a href="/">Alan Ray D'souza</a>.</td>
 </tr>
 
-</table>
-
-<table border="0" cellspacing="0" cellpadding="0" width="690">
-<tr>
-<td width="500" valign="top">
-<table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500" bordercolor="#ad42f4">
-<tr>
-
-<td width="500" valign="top" class="content">
-<div align="center">
-<a href="index.html"><img class="logo" src="logo.png" width="72" height="72" border="0" alt="Logo"></a> <h1 style="color:#005491;font-family:verdana;"";><b>Unit Converter</b></h1>
-<span class="black"><p2 style="color:#2d16bf;font-family:arial;font-size:19;"";><b>Quickly and easily convert units!</b></h1></span>
-</div>
-
-<!-- Main data -->
-
-<noscript>
-<blockquote>
-<p><font size="3" face="arial" color="#FF0000"><b>You do not have JavaScript enabled.</b></font><br>
-<font size="2" face="arial" color="#000080">The script on this site require the use of JavaScript so enable it before continuing, or the website will not function as intended.</font></p>
-</blockquote>
-</noscript>
-
-<p>&nbsp;</p>
-    <form name="form1">
-      <div align="center"><center><table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
-	  	<tr>
-          <td align="center" colspan="3" align="center">To convert lengths,</td>
-        </tr>
-        <tr>
-			<td align="center"><select name="unit1">
-				<option value="gigameter">Gigameter (Gm)</option>
-				<option value="megameter">Megameter (Mm)</option>
-				<option value="kilometer">Kilometer (km)</option>
-				<option value="meter">Meter (m)</option>
-				<option value="centimeter">Centimeter (cm)</option>
-				<option value="millimeter">Millimeter (mm)</option>
-				<option value="naut-mile">Nautical mile (nmi, nm, M)</option>
-				<option value="mile">Mile (mi)</option>
-				<option value="yard">Yard (yd)</option>
-				<option value="foot" selected>Foot (ft)</option>
-				<option value="inch">Inch (in)</option>
-				<option value="thou">Thou (mil)</option>
-			</select>
-			<br><input type="number" name="num1" size="15">
-			<br>To<br><select name="unit2">
-				<option value="gigameter">Gigameter (Gm)</option>
-				<option value="megameter">Megameter (Mm)</option>
-				<option value="kilometer">Kilometer (km)</option>
-				<option value="meter" selected>Meter (m)</option>
-				<option value="centimeter">Centimeter (cm)</option>
-				<option value="millimeter">Millimeter (mm)</option>
-				<option value="naut-mile">Nautical mile (nmi)</option>
-				<option value="mile">Mile (mi)</option>
-				<option value="yard">Yard (yd)</option>
-				<option value="foot">Foot (ft)</option>
-				<option value="inch">Inch (in)</option>
-				<option value="thou">Thou (mil)</option>
-			</select>
-			<br><input type="button" value="Calculate" onClick="calc1(this.form)"></td>
-        </tr>
-        <tr>
-			<td align="center">Result<br><input type="number" name="result1" size="20" maxlength="40" id="result1" READONLY>
-					
-		</td>
-        </tr>
-		<tr>
-          <td align="center" colspan="3" align="center">To convert weights,</td>
-        </tr>
-		<tr>
-			<td align="center"><select name="unit3">
-				<option value="tonne">Metric Tonne (t)</option>
-				<option value="kilogram">Kilogram (kg)</option>
-				<option value="gram">Gram (g)</option>
-				<option value="milligram">Milligram (mg)</option>
-				<option value="long-ton">Long Ton (Imperial)</option>
-				<option value="short-ton">Short Ton (US)</option>
-				<option value="stone">Stone (st)</option>
-				<option value="pound" selected>Pound (lb)</option>
-				<option value="ounce">Ounce (oz)</option>
-			</select>
-			<br><input type="number" name="num2" size="15">
-			<br>To<br><select name="unit4">
-				<option value="tonne">Metric Tonne (t)</option>
-				<option value="kilogram" selected>Kilogram (kg)</option>
-				<option value="gram">Gram (g)</option>
-				<option value="milligram">Milligram (mg)</option>
-				<option value="long-ton">Long Ton (Imperial)</option>
-				<option value="short-ton">Short Ton (US)</option>
-				<option value="stone">Stone (st)</option>
-				<option value="pound">Pound (lb)</option>
-				<option value="ounce">Ounce (oz)</option>
-			</select>
-			<br><input type="button" value="Calculate" onClick="calc2(this.form)"></td>
-        </tr>
-        <tr>
-			<td align="center">Result<br><input type="number" name="result2" size="20" maxlength="40" id="result2" READONLY>
-					
-		</td>
-        </tr>
-		<tr>
-          <td align="center" colspan="3" align="center">To convert temperature,</td>
-        </tr>
-		<tr>
-			<td align="center">
-			Celsius (°C)<input type="number" id="ce" name="num3" size="10" oninput="calc3(this.id, this.form)" onchange="calc3(this.name, this.form)"> <br>
-			Fahrenheit (°F)<input type="number" id="fa" name="num4" size="10" oninput="calc3(this.id, this.form)" onchange="calc3(this.name, this.form)"> <br>
-			Kelvin (K)<input type="number" id="ke" name="num5" size="10" oninput="calc3(this.id, this.form)" onchange="calc3(this.name, this.form)"> <br>
-        </tr>
-		<tr>
-          <td align="center" colspan="3" align="center">To convert volume,</td>
-        </tr>
-		<tr>
-			<td align="center"><select name="unit6">
-				<option value="cu-m">Cubic Meter (m³)</option>
-				<option value="cu-cm">Cubic Centimeter (cm³)</option>
-				<option value="liter">Liter (l)</option>
-				<option value="centiliter">Centiliter (cl)</option>
-				<option value="milliliter">Milliliter (ml)</option>
-				<option value="cu-yd">Cubic Yard (yd³)</option>
-				<option value="cu-ft">Cubic Foot (ft³)</option>
-				<option value="cu-in">Cubic Inch (in³)</option>
-				<option value="gallon" selected>US gallon</option>
-				<option value="quart">US quart (qt)</option>
-				<option value="pint">US pint (p/pt)</option>
-				<option value="cup">US cup</option>
-				<option value="floz">US fluid ounce (fl oz)</option>
-				<option value="tbsp">US tablespoon (tbsp)</option>
-				<option value="tsp">US teaspoon (tsp)</option>
-				<option value="igallon">Imperial gallon</option>
-				<option value="iquart">Imperial quart (qt)</option>
-				<option value="ipint">Imperial pint (p/pt)</option>
-				<option value="icup">Imperial cup</option>
-				<option value="ifloz">Imperial fluid ounce (fl oz)</option>
-				<option value="itbsp">Imperial tablespoon (tbsp)</option>
-				<option value="itsp">Imperial teaspoon (tsp)</option>
-			</select>
-			<br><input type="number" name="num6" size="15">
-			<br>To<br><select name="unit7">
-				<option value="cu-m">Cubic Meter (m³)</option>
-				<option value="cu-cm">Cubic Centimeter (cm³)</option>
-				<option value="liter" selected>Liter (l)</option>
-				<option value="centiliter">Centiliter (cl)</option>
-				<option value="milliliter">Milliliter (ml)</option>
-				<option value="cu-yd">Cubic Yard (yd³)</option>
-				<option value="cu-ft">Cubic Foot (ft³)</option>
-				<option value="cu-in">Cubic Inch (in³)</option>
-				<option value="gallon">US gallon</option>
-				<option value="quart">US quart (qt)</option>
-				<option value="pint">US pint (p/pt)</option>
-				<option value="cup">US cup</option>
-				<option value="floz">US fluid ounce (fl oz)</option>
-				<option value="tbsp">US tablespoon (tbsp)</option>
-				<option value="tsp">US teaspoon (tsp)</option>
-				<option value="i-gallon">Imperial gallon</option>
-				<option value="i-quart">Imperial quart (qt)</option>
-				<option value="i-pint">Imperial pint (p/pt)</option>
-				<option value="i-cup">Imperial cup</option>
-				<option value="i-floz">Imperial fluid ounce (fl oz)</option>
-				<option value="i-tbsp">Imperial tablespoon (tbsp)</option>
-				<option value="i-tsp">Imperial teaspoon (tsp)</option>
-			</select>
-			<br><input type="button" value="Calculate" onClick="calc4(this.form)"></td>
-        </tr>
-        <tr>
-			<td align="center">Result<br><input type="number" name="result4" size="20" maxlength="40" id="result4" READONLY>
-					
-		</td>
-        </tr>
-		<tr>
-          <td align="center" colspan="3" align="center">To convert area,</td>
-        </tr>
-		<tr>
-			<td align="center"><select name="unit8">
-				<option value="sq-km" selected>Sq. kilometer (km²)</option>
-				<option value="sq-m">Sq. meter (m²)</option>
-				<option value="sq-cm">Sq. centimeter (cm²)</option>
-				<option value="hectare">Hectare</option>
-				<option value="are">Are</option>
-				<option value="sq-mi">Sq. mile (mi²)</option>
-				<option value="sq-yd">Sq. yard (yd²)</option>
-				<option value="sq-ft">Sq. foot (ft²)</option>
-				<option value="sq-in">Sq. inch (in²)</option>
-				<option value="acre">Acre</option>
-
-			</select>
-			<br><input type="number" name="num7" size="15">
-			<br>To<br><select name="unit9">
-				<option value="sq-km">Sq. kilometer (km²)</option>
-				<option value="sq-m">Sq. meter (m²)</option>
-				<option value="sq-cm">Sq. centimeter (cm²)</option>
-				<option value="hectare">Hectare</option>
-				<option value="are">Are</option>
-				<option value="sq-mi" selected>Sq. mile (mi²)</option>
-				<option value="sq-yd">Sq. yard (yd²)</option>
-				<option value="sq-ft">Sq. foot (ft²)</option>
-				<option value="sq-in">Sq. inch (in²)</option>
-				<option value="acre">Acre</option>
-			</select>
-			<br><input type="button" value="Calculate" onClick="calc5(this.form)"></td>
-        </tr>
-        <tr>
-			<td align="center">Result<br><input type="number" name="result5" size="20" maxlength="40" id="result5" READONLY>
-					
-		</td>
-        </tr>
-      </table>
-      </center></div>
-    </form>
-
-<!-- Center Bottom -->
-</td></tr></table>
-<table border="0" cellpadding="0" cellspacing="0" width="500">
-<tr><td width="500" valign="top" class="content">
-<center>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Homepage Bottom -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:320px;height:100px"
-     data-ad-client="ca-pub-2567231794200405"
-     data-ad-slot="6161957371"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+                                <br>
 </center>
-<!-- End Center Bottom -->
-
-</td>
-</tr>
-</table>
-
-</td>
-
-<td width="5" bgcolor="#777777" valign="top"><img src="spacer.gif" width="1" height="2" alt="" border="0"></td>
-
-<td width="190" valign="top" class="rightside">
-<!-- Right side Start -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr> 
-<td align="center" id="rcontainer"><br>Bookmark this page! It may come in handy.<br><br>Thanks for visiting!<br><br><input type="button" id="darkmode-button" value="Toggle dark mode" onClick="switchDarkMode()"></td>
-</tr>
-</table>
-
-<script language="Javascript" type="text/javascript">
-
-</div>
-
-<!--Bottom Right--->
-<table border="0" cellpadding="5" cellspacing="0" width="690">
-<td width="250" height="17" align="right" class="footer">&copy; Copyright 2017-2017 <a href="/">Alan Ray D'souza</a>.</td>
-</tr>
-
-<br> 
-</center>
-</body>
-</html>
+</body >
+</html >

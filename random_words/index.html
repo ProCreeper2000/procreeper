@@ -1,168 +1,198 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Random Word Generator</title>
-<link rel="shortcut icon" href="favicon.ico" />
-<meta name="description" content="Quickly generate random words from a list of 58,110 English words!">
-<meta name="keywords" content="random, many, english, language, words, list, generate, generator">
-<meta name="author" content="Alan Ray D'sousa">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Random Word Generator</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="description" content="Quickly generate random words from a list of 58,110 English words!">
+    <meta name="keywords" content="random, many, english, language, words, list, generate, generator">
+    <meta name="author" content="Alan Ray D'sousa">
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-2567231794200405",
-    enable_page_level_ads: true
-  });
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2567231794200405",
+            enable_page_level_ads: true
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-111410202-1');
-</script>
+        gtag('config', 'UA-111410202-1');
+    </script>
 
 
-<script src="words.txt"></script>
-	
-<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-var words = text.split("\n");
-function shuffle(a) {
-	var j, x, i;
-	for (i = a.length; i; i--) {
-		j = Math.floor(Math.random() * i);
-		x = a[i - 1];
-		a[i - 1] = a[j];
-		a[j] = x;
-	}
-}
-	
-function generate(form) {	
-	var result = "";
-	var num = form.number.value;
-	
-	if (num == 0 || num == null) {
-		alert("If you want to have no random words, just type nothing! There's your 0 random words! :)");
-		return;
-	}
-	
-	for(i=0; i<num; i++) {
-		var word = words[Math.floor(Math.random() * words.length)];
-		result = result + word + " ";
-	}
-	form.result.value = result;
-}
+    <script src="words.txt"></script>
 
-function switchDarkMode(){;
-	var body = document.getElementById("body");
-	var currentClass = body.className;
-	body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
-}
-</script>
+    <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+        var words = text.split("\n");
 
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+        function generateWords(form) {
+            var result = "";
+            var num = form.number1.value;
+
+            if (num == 0 || num == null) {
+                return alert("If you want to have no random words, just type nothing! There's your 0 random words! :)");
+            }
+
+            for (i = 0; i < num; i++) {
+                var word = words[Math.floor(Math.random() * words.length)];
+                result = result + word + " ";
+            }
+            form.result1.value = result;
+        }
+
+        function generateChars(form) {
+            var result = "";
+            var num = form.number2.value;
+            var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var chars = str.split("");
+
+            if (num == 0 || num == null) {
+                return alert("If you want to have no random letters, just type nothing! There's your 0 random letters! :)");
+            }
+
+            for (i = 0; i < num; i++) {
+                var char = chars[Math.floor(Math.random() * chars.length)];
+                result = result + char;
+                if (form.space.checked)
+                    result += " ";
+            }
+            if (!form.capital.checked)
+                result = result.toLowerCase();
+
+            form.result2.value = result;
+        }
+
+        function switchDarkMode() {
+            ;
+            var body = document.getElementById("body");
+            var currentClass = body.className;
+            body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+        }
+    </SCRIPT>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body id="body" className="light-mode">
-<center>
+    <center>
 
-<!--[if lt IE 9]>
-    <div class="alert">
-	<p2 style="font-size:48"><b>UNSUPPORTED BROWSER</b> This website will not function as intended on Internet Explorer 8 or below!</p2>
-	</div>
-<![endif]-->
+        <!--[if lt IE 9]>
+            <div class="alert">
+            <p2 style="font-size:48"><b>UNSUPPORTED BROWSER</b> This website will not function as intended on Internet Explorer 8 or below!</p2>
+            </div>
+        <![endif]-->
 
-<table border="0" cellpadding="3" cellspacing="0" width="692" id="mainbg"><tr><td>
-<!-- The above table places the 1 pixel gray outline around the whole page -->
+        <table border="0" cellpadding="3" cellspacing="0" width="692" id="mainbg">
+            <tr>
+                <td>
+                    <!-- The above table places the 1 pixel gray outline around the whole page -->
 
-<tr>
-<td width="500" height="17" align="right" class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
+            <tr>
+                <td width="500" height="17" align="right" class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
+            </tr>
+
+        </table>
+
+        <table border="0" cellspacing="0" cellpadding="0" width="690">
+            <tr>
+                <td width="500" valign="top">
+                    <table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500" bordercolor="#269b00">
+                        <tr>
+
+                            <td width="500" valign="top" class="content">
+                                <div align="center">
+                                    <a href="index.html"><img class="logo" src="logo.png" width="72" height="72" border="0" alt="Logo"></a> <h1 style="color:#36e975;font-family:verdana;" ";><b>Random Word Generator</b></h1>
+                                    <span class="black"><p2 style="color:#8cc637;font-family:arial;font-size:19;" ";><b>Quickly generate random words from a list of 58,110 English words!</b></h1></span>
+                                </div>
+
+                                <!-- Main data -->
+
+                                <noscript>
+                                    <blockquote>
+                                        <p>
+                                            <font size="3" face="arial" color="#FF0000"><b>You do not have JavaScript enabled.</b></font><br>
+                                            <font size="2" face="arial" color="#000080">The script on this site require the use of JavaScript so enable it before continuing, or the website will not function as intended.</font>
+                                        </p>
+                                    </blockquote>
+                                </noscript>
+
+                                <p>&nbsp;</p>
+                                <form name="form1">
+                                    <div align="center">
+                                        <center>
+                                            <table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
+                                                <tr>
+                                                    <td align="center">Amount of words: <input type="number" name="number1" size="5"><br><input type="button" value="Generate!" onClick="generateWords(this.form)"></td>
+                                                    <td align="center">Result<br><textarea name="result1" rows="14" cols="50" READONLY>Your words will appear here!</textarea></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" colspan="3" align="center">Or</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">Amount of letters: <input type="number" name="number2" size="5"><br><input type="checkbox" name="capital" value="capital" checked> CAPITAL letters?<br><input type="checkbox" name="space" value="space"> S p a c e in between?<br><input type="button" value="Generate!" onClick="generateChars(this.form)"></td>
+                                                    <td align="center">Result<br><textarea name="result2" rows="14" cols="50" READONLY>Your words will appear here!</textarea></td>
+                                                </tr>
+                                            </table>
+                                        </center>
+                                    </div>
+                                </form>
+
+                                <!-- Center Bottom -->
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="0" cellpadding="0" cellspacing="0" width="500">
+                        <tr>
+                            <td width="500" valign="top" class="content">
+                                <center>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+
+                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- Homepage Bottom -->
+                                    <ins class="adsbygoogle"
+                                         style="display:inline-block;width:320px;height:100px"
+                                         data-ad-client="ca-pub-2567231794200405"
+                                         data-ad-slot="6161957371"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+
+                                </center>
+                                <!-- End Center Bottom -->
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+
+                <td width="5" bgcolor="#777777" valign="top"><img src="spacer.gif" width="1" height="2" alt="" border="0"></td>
+
+                <td width="190" valign="top" class="rightside">
+                    <!-- Right side Start -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td align="center" id="rcontainer"><br>Bookmark this page! It may come in handy.<br><br>Thanks for visiting!<br><br><a href="http://www.mieliestronk.com/wordlist.html"><input type="button" id="formula-button" value="Wordlist Source"></a> <br><br> <input type="button" id="darkmode-button" value="Toggle dark mode" onClick="switchDarkMode()"></td>
+                        </tr>
+                    </table>
+
+                    <script language="Javascript" type="text/javascript">
+
+</div >
+
+<!--Bottom Right-- ->
+                                <table border="0" cellpadding="5" cellspacing="0" width="690">
+                                    <td width="250" height="17" align="right" class="footer">&copy; Copyright 2017-2017 <a href="/">Alan Ray D'souza</a>.</td>
 </tr>
 
-</table>
-
-<table border="0" cellspacing="0" cellpadding="0" width="690">
-<tr>
-<td width="500" valign="top">
-<table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500" bordercolor="#269b00">
-<tr>
-
-<td width="500" valign="top" class="content">
-<div align="center">
-<a href="index.html"><img class="logo" src="logo.png" width="72" height="72" border="0" alt="Logo"></a> <h1 style="color:#36e975;font-family:verdana;"";><b>Random Word Generator</b></h1>
-<span class="black"><p2 style="color:#8cc637;font-family:arial;font-size:19;"";><b>Quickly generate random words from a list of 58,110 English words!</b></h1></span>
-</div>
-
-<!-- Main data -->
-
-<noscript>
-<blockquote>
-<p><font size="3" face="arial" color="#FF0000"><b>You do not have JavaScript enabled.</b></font><br>
-<font size="2" face="arial" color="#000080">The script on this site require the use of JavaScript so enable it before continuing, or the website will not function as intended.</font></p>
-</blockquote>
-</noscript>
-
-<p>&nbsp;</p>
-    <form name="form1">
-      <div align="center"><center><table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
-        <tr>
-          <td align="center">Amount of words: <input type="number" name="number" size="5"><br><input type="button" value="Generate!" onClick="generate(this.form)"></td>
-          <td align="center">Result<br><textarea name="result" rows="14" cols="50" READONLY>Your words will appear here!</textarea></td>
-        </tr>
-      </table>
-      </center></div>
-    </form>
-
-<!-- Center Bottom -->
-</td></tr></table>
-<table border="0" cellpadding="0" cellspacing="0" width="500">
-<tr><td width="500" valign="top" class="content">
-<center>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Homepage Bottom -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:320px;height:100px"
-     data-ad-client="ca-pub-2567231794200405"
-     data-ad-slot="6161957371"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+                                <br>
 </center>
-<!-- End Center Bottom -->
-
-</td>
-</tr>
-</table>
-
-</td>
-
-<td width="5" bgcolor="#777777" valign="top"><img src="spacer.gif" width="1" height="2" alt="" border="0"></td>
-
-<td width="190" valign="top" class="rightside">
-<!-- Right side Start -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-<tr> 
-<td align="center" id="rcontainer"><br>Bookmark this page! It may come in handy.<br><br>Thanks for visiting!<br><br><a href="http://www.mieliestronk.com/wordlist.html"><input type="button" id="formula-button" value="Wordlist Source"></a> <br><br> <input type="button" id="darkmode-button" value="Toggle dark mode" onClick="switchDarkMode()"></td>
-</tr>
-</table>
-
-<script language="Javascript" type="text/javascript">
-
-</div>
-
-<!--Bottom Right--->
-<table border="0" cellpadding="5" cellspacing="0" width="690">
-<td width="250" height="17" align="right" class="footer">&copy; Copyright 2017-2017 <a href="/">Alan Ray D'souza</a>.</td>
-</tr>
-
-<br> 
-</center>
-</body>
-</html>
+</body >
+</html >
