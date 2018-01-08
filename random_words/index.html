@@ -43,7 +43,7 @@
                 var word = words[Math.floor(Math.random() * words.length)];
                 result = result + word + " ";
             }
-            if (!form.capitalW.checked)
+            if (!form.capitals1.checked)
                 result = result.toLowerCase();
 
             form.result1.value = result;
@@ -65,7 +65,7 @@
                 if (form.space.checked)
                     result += " ";
             }
-            if (!form.capitalC.checked)
+            if (!form.capitals2.checked)
                 result = result.toLowerCase();
 
             form.result2.value = result;
@@ -130,14 +130,14 @@
                                         <center>
                                             <table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
                                                 <tr>
-                                                    <td align="center">Amount of words: <input type="number" name="number1" size="5"><br><input type="checkbox" name="capitalW" value="capital"> CAPITAL letters?<br><input type="button" value="Generate!" onClick="generateWords(this.form)"></td>
+                                                    <td align="center">Amount of words: <input type="number" name="number1" size="5"><br><input type="checkbox" name="capitals1" value="capital"> CAPITAL letters?<br><input type="button" value="Generate!" onClick="generateWords(this.form)"></td>
                                                     <td align="center">Result<br><textarea name="result1" rows="14" cols="50" READONLY>Your words will appear here!</textarea></td>
                                                 </tr>
                                                 <tr>
                                                     <td align="center" colspan="3" align="center">Or</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">Amount of letters: <input type="number" name="number2" size="5"><br><input type="checkbox" name="capitalC" value="capital" checked> CAPITAL letters?<br><input type="checkbox" name="space" value="space"> S p a c e in between?<br><input type="button" value="Generate!" onClick="generateChars(this.form)"></td>
+                                                    <td align="center">Amount of letters: <input type="number" name="number2" size="5"><br><input type="checkbox" name="capitals2" value="capital" checked> CAPITAL letters?<br><input type="checkbox" name="space" value="space"> S p a c e in between?<br><input type="button" value="Generate!" onClick="generateChars(this.form)"></td>
                                                     <td align="center">Result<br><textarea name="result2" rows="14" cols="50" READONLY>Your letters will appear here!</textarea></td>
                                                 </tr>
                                             </table>
