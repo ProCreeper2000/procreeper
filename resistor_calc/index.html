@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Dropping Resistor Calculator</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <meta name="description" content="Dropping Resistor Calculator">
@@ -27,7 +27,7 @@
     </script>
 
 
-    <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+    <script>
         function calc1(form) {
             volt = form.volt.value
             gvolt = form.gvolt.value
@@ -42,7 +42,7 @@
         }
 
         function switchDarkMode() {
-            ;
+
             var body = document.getElementById("body");
             var currentClass = body.className;
             body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
@@ -52,8 +52,8 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
-<body id="body" className="light-mode">
-    <center>
+<body id="body" class="light-mode">
+
 
         <!--[if lt IE 9]>
             <div class="alert">
@@ -61,13 +61,13 @@
             </div>
         <![endif]-->
 
-        <table border="0" cellpadding="3" cellspacing="0" width="692" id="mainbg">
+        <table id="maintable">
             <tr>
                 <td>
                     <!-- The above table places the 1 pixel gray outline around the whole page -->
 
             <tr>
-                <td width="500" height="17" align="right" class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
+                <td  class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
             </tr>
 
         </table>
@@ -75,7 +75,7 @@
         <table border="0" cellspacing="0" cellpadding="0" width="690">
             <tr>
                 <td width="500" valign="top">
-                    <table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500" bordercolor="#ff8c00">
+                    <table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500">
                         <tr>
 
                             <td width="500" valign="top" class="content">
@@ -98,7 +98,7 @@
                                 <p>&nbsp;</p>
                                 <form name="form1">
                                     <div align="center">
-                                        <center>
+                                    
                                             <table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
                                                 <tr>
                                                     <td align="center">Voltage: <input type="text" name="volt" size="10"><br>Voltage Requirement: <input type="text" name="gvolt" size="10"><br>Current Draw (Amps): <input type="text" name="amps" size="10"><br><input type="button" value="Calculate" onClick="calc1(this.form)"></td>
@@ -108,7 +108,7 @@
                             </td>
                         </tr>
                     </table>
-    </center></div>
+    </div>
     </form>
 
     <!-- Center Bottom -->
@@ -116,7 +116,7 @@
     <table border="0" cellpadding="0" cellspacing="0" width="500">
         <tr>
             <td width="500" valign="top" class="content">
-                <center>
+            
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
 
@@ -131,7 +131,7 @@
                             <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
-                </center>
+                
                 <!-- End Center Bottom -->
 
             </td>
@@ -150,7 +150,7 @@
             </tr>
         </table>
 
-        <script language="Javascript" type="text/javascript">
+        <script>
 
 </div>
 
@@ -160,6 +160,6 @@
 </tr>
 
                         <br>
-</center>
+
 </body >
 </html >
