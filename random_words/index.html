@@ -57,6 +57,9 @@
             if (form.numbers.checked)
                 str += "0123456789";
 
+            if (form.symbols.checked)
+                str += '!"#$%&\'()*+,-./0123456789:;<=>?@[\\]^_`{|}~';
+
             var chars = str.split("");
 
             if (num == 0 || num == null) {
@@ -148,6 +151,7 @@
                                                         <input type="checkbox" name="capitals2" value="capital" checked> CAPITAL letters?<br>
                                                         <input type="checkbox" name="space" value="space"> S p a c e in between?<br>
                                                         <input type="checkbox" name="numbers" value="number"> Include numbers?<br>
+                                                        <input type="checkbox" name="symbols" value="symbol"> Include symbols?<br>
                                                         <input type="button" value="Generate!" onClick="generateChars(this.form)">
                                                     </td>
                                                     <td align="center">Result<br><textarea name="result2" rows="14" cols="50" READONLY>Your letters will appear here!</textarea></td>
