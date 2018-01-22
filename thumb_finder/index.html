@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -32,8 +32,11 @@
         function parse1(form) {
             url = form.link1.value;
 
+            if (url == null || !url) { return alert("Wow, that's a nice video... nothing!"); }
+
             var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
             var match = url.match(regExp);
+            if (match = null || !match) { return alert('Invalid URL!'); }
             var video_id = match[2]
 
             if (video_id.length === 11) {
