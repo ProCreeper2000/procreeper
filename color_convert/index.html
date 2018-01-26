@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -9,28 +9,31 @@
     <meta name="keywords" content="color, hex, rgb, hexadecimal, hex to rgb, rgb to hex, rgba, rgba to hex, hex to rgba">
     <meta name="author" content="Alan Ray D'sousa">
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2567231794200405",
-            enable_page_level_ads: true
-        });
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-111410202-1');
-    </script>
-
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
     <script>
-        function rgbToHex(hex) {
-            form.result1.value = "#" + hex;
+        var toHex = function (a) {
+            var hex = Number(a).toString(16);
+            if (hex.length < 2) { hex = "0" + hex; }
+            return hex;
         }
+
+        function rgbToHex(form) {
+            var re = form.red.value;
+            var gr = form.green.value;
+            var bl = form.blue.value;
+
+            if (!re || re == null || !gr || gr == null || !bl || bl == null)
+            if (re > 255 || gr > 255 || bl > 255) return alert("So an RGB value more than 255, huh? Really strange...");
+            if (re < 0 || gr < 0 || bl < 0) return alert("So an RGB value less than 0, huh? Really strange...");
+
+            var r = toHex(re);
+            var g = toHex(gr);
+            var b = toHex(bl);
+            form.result1.value = "#" + r + g + b;
+        };
 
         function hexToRgb(form) {
             var str = form.hex1.value.replace('#', '');
@@ -54,132 +57,60 @@
 
             form.result2.value = [r, g, b].join();
         }
-
-        function switchDarkMode() {
-
-            var body = document.getElementById("body");
-            var currentClass = body.className;
-            body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
-        }
-    </SCRIPT>
-
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </script>
 </head>
 
-<body id="body" class="light-mode">
+
+<body>
+    <div class="nav-left header">
+        <a class=nav-item href="/" style="color: white;"><p> Home </p></a>
+    </div>
+    <div style="text-align:center; color:white;">
+        <br><br><br>
+        <!--<a href="/"> <img src="logo.png" alt="Logo" class="logo"></a>-->
+        <br>
+        <h1> HEX/RGB Converter </h1>
+    </div>
+    <br><br><br>
+    <div class="medium">
+        <br>
+
+        <form name="form1">
+            <table style="width:90%">
+                <tr>
+                    <td>
+                        <p>RGB<br> <!-- The number inputs don't support size="" -->
+                            R<input type="number" name="red" style="width: 40px;margin-bottom: 5px;">
+                            G<input type="number" name="green" style="width: 40px;margin-bottom: 5px;">
+                            B<input type="number" name="blue" style="width: 40px;margin-bottom: 5px;"><br>
+                        <input type="button" class="button1" value="RGB to HEX" onClick="rgbToHex(this.form)"></p>
+                    </td>
+
+                    <td>
+                        <p>Hexadecimal<br><input type="text" name="result1" size="5" maxlength="40" READONLY></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Hexadecimal<br><input type="text" name="hex1" size="5"><br>
+                        <input type="button" class="button1" value="HEX to RGB" style="margin-top: 5px;" onClick="hexToRgb(this.form)"></p>
+                    </td>
+
+                    <td>
+                        <p>RGB<br><input type="text" name="result2" size="7" maxlength="40" READONLY></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
 
 
-        <!--[if lt IE 11]>
-            <div class="alert">
-            <p2 style="font-size:48"><b>UNSUPPORTED BROWSER</b> This website will not function as intended on Internet Explorer 8 or below!</p2>
-            </div>
-        <![endif]-->
 
-        <table id="maintable">
-            <tr>
-                <td>
-                    <!-- The above table places the 1 pixel gray outline around the whole page -->
 
-            <tr>
-                <td  class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
-            </tr>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer medium" style="color: black; font-family: Arial, sans-serif;">
+        <p2 style="text-align:center;">Copyright <i class="fa fa-copyright"></i> Alan Ray D'souza 2018 | Photo by Lance Anderson on Unsplash</p2>
+    </div>
+</body>
 
-        </table>
-
-        <table border="0" cellspacing="0" cellpadding="0" width="690">
-            <tr>
-                <td width="500" valign="top">
-                    <table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500">
-                        <tr>
-
-                            <td width="500" valign="top" class="content">
-                                <div align="center">
-                                    <a href="index.html"><img class="logo" src="logo.png" width="72" height="72" border="0" alt="Logo"></a> <h1 style="color:#01c45f;font-family:verdana;" ";><b>Color Converter</b></h1>
-                                    <span class="black"><p2 style="color:#e8bc1e;font-family:arial;font-size:19;" ";><b>Take the maths out of hexadecimal conversions!</b></h1></span>
-                                </div>
-
-                                <!-- Main data -->
-
-                                <noscript>
-                                    <blockquote>
-                                        <p>
-                                            <font size="3" face="arial" color="#FF0000"><b>You do not have JavaScript enabled.</b></font><br>
-                                            <font size="2" face="arial" color="#000080">The script on this site require the use of JavaScript so enable it before continuing, or the website will not function as intended.</font>
-                                        </p>
-                                    </blockquote>
-                                </noscript>
-
-                                <p>&nbsp;</p>
-                                <form name="form1">
-                                    <div align="center">
-                                    
-                                            <table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
-                                                <tr>
-                                                    <td align="center">Color <input type="color" name="color1"><br><input type="button" value="Calculate" onClick="result1.value = color1.value;"></td>
-                                                    <td align="center">Hexadecimal<br><input type="text" name="result1" size="5" maxlength="40" READONLY></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center" colspan="3" align="center">Or</td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center">Hexadecimal <input type="text" name="hex1" size="5"><br><input type="button" value="Calculate" onClick="hexToRgb(this.form)"></td>
-                                                    <td align="center">RGB<br><input type="text" name="result2" size="7" maxlength="40" READONLY></td>
-                                                </tr>
-                                            </table>
-                                        
-                                    </div>
-                                </form>
-
-                                <!-- Center Bottom -->
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="500">
-                        <tr>
-                            <td width="500" valign="top" class="content">
-                            
-                                    <p>&nbsp;</p>
-                                    <p>&nbsp;</p>
-
-                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                    <!-- Homepage Bottom -->
-                                    <ins class="adsbygoogle"
-                                         style="display:inline-block;width:320px;height:100px"
-                                         data-ad-client="ca-pub-2567231794200405"
-                                         data-ad-slot="6161957371"></ins>
-                                    <script>
-                                        (adsbygoogle = window.adsbygoogle || []).push({});
-                                    </script>
-
-                                
-                                <!-- End Center Bottom -->
-
-                            </td>
-                        </tr>
-                    </table>
-
-                </td>
-
-                <td width="5" bgcolor="#777777" valign="top"><img src="spacer.gif" width="1" height="2" alt="" border="0"></td>
-
-                <td width="190" valign="top" class="rightside">
-                    <!-- Right side Start -->
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td align="center" id="rcontainer"><br>Bookmark this page! It may come in handy.<br><br>Thanks for visiting!<br><br> <input type="button" id="darkmode-button" value="Toggle dark mode" onClick="switchDarkMode()"></td>
-                        </tr>
-                    </table>
-
-                    <script>
-
-</div >
-
-<!--Bottom Right-- ->
-                                <table border="0" cellpadding="5" cellspacing="0" width="690">
-                                    <td width="250" height="17" align="right" class="footer">&copy; Copyright 2017-2017 <a href="/">Alan Ray D'souza</a>.</td>
-</tr>
-
-                                <br>
-
-</body >
-</html >
+</html>

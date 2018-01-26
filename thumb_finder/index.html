@@ -9,180 +9,100 @@
     <meta name="keywords" content="youtube, thumbnail, thumb, finder, calculator, thumbnail link, link, linker">
     <meta name="author" content="Alan Ray D'sousa">
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2567231794200405",
-            enable_page_level_ads: true
-        });
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+        <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
-        gtag('config', 'UA-111410202-1');
-    </script>
+        <script>
+            function parse1(form) {
+                url = form.link1.value;
 
+                if (url == null || !url) { return alert("Wow, that's a nice video... nothing!"); }
 
-    <script>
-<!--
-        function parse1(form) {
-            url = form.link1.value;
+                var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                var match = url.match(regExp);
+                if (match == null || !match) { return alert('Invalid URL!'); }
+                var video_id = match[2];
 
-            if (url == null || !url) { return alert("Wow, that's a nice video... nothing!"); }
-
-            var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-            var match = url.match(regExp);
-            if (match = null || !match) { return alert('Invalid URL!'); }
-            var video_id = match[2]
-
-            if (video_id.length === 11) {
-                video_id = 'https://img.youtube.com/vi/' + video_id
-                form.result1.value = video_id + '/maxresdefault.jpg';
-                form.result2.value = video_id + '/sddefault.jpg';
-                form.result3.value = video_id + '/hqdefault.jpg';
-                form.result4.value = video_id + '/mqdefault.jpg';
-                form.result5.value = video_id + '/default.jpg';
-            } else {
-                return alert('Invalid URL!');
+                if (video_id.length === 11) {
+                    video_id = 'https://img.youtube.com/vi/' + video_id
+                    form.result1.value = video_id + '/maxresdefault.jpg';
+                    form.result2.value = video_id + '/sddefault.jpg';
+                    form.result3.value = video_id + '/hqdefault.jpg';
+                    form.result4.value = video_id + '/mqdefault.jpg';
+                    form.result5.value = video_id + '/default.jpg';
+                } else {
+                    return alert('Invalid URL!');
+                }
             }
-        }
 
-        function openLink(a) {
-            elemA = document.getElementById(a)
-            if (elemA.value.length != 0) {
-                window.open(elemA.value)
+            function openLink(a) {
+                elemA = document.getElementById(a)
+                if (elemA.value.length != 0) {
+                    window.open(elemA.value)
+                }
             }
-        }
-
-        function switchDarkMode() {
-            var body = document.getElementById("body");
-            var currentClass = body.className;
-            body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
-        }
-    </script>
-
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-
-<body id="body" class="light-mode">
+        </script>
+    </head>
 
 
-        <!--[if lt IE 9]>
-            <div class="alert">
-            <p2 style="font-size:48"><b>UNSUPPORTED BROWSER</b> This website will not function as intended on Internet Explorer 8 or below!</p2>
-            </div>
-        <![endif]-->
+    <body>
+        <div class="nav-left header">
+            <a class=nav-item href="/" style="color: white;"><p> Home </p></a>
+        </div>
+        <div style="text-align:center; color:white;">
+            <br><br><br>
+            <!--<a href="/"> <img src="logo.png" alt="Logo" class="logo"></a>-->
+            <br>
+            <h1> Thumbnail Finder </h1>
+        </div>
+        <br><br><br>
+                <div class="medium">
+                    <br>
 
-        <table id="maintable">
-            <tr>
-                <td>
-                    <!-- The above table places the 1 pixel gray outline around the whole page -->
+                    <form name="form1">
+                        <table style="width:90%">
+                            <tr>
+                                <td>
+                                    <p>Video link:<input type="text" name="link1" size="50"></p><input type="button" class="button1" value="Get Link" onClick="parse1(this.form)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Max Res [maxresdefault.jpg] <input type="text" name="result1" size="50" maxlength="40" id="result1" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result1')"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Standard Definition (640x480) [sddefault.jpg] <input type="text" name="result2" size="50" maxlength="40" id="result2" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result2')"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>High Quality (480x360) [hqdefault.jpg] <input type="text" name="result3" size="50" maxlength="40" id="result3" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result3')"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Medium Quality (320x180) [mqdefault.jpg] <input type="text" name="result4" size="50" maxlength="40" id="result4" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result4')"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Default (120x90) [default.jpg]<input type="text" name="result5" size="50" maxlength="40" id="result5" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result5')"></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
 
-            <tr>
-                <td  class="nav">| <a href="/">Home</a> | <a href="/privacy policy.txt">Privacy Policy</a> | &nbsp;</td>
-            </tr>
 
-        </table>
 
-        <table border="0" cellspacing="0" cellpadding="0" width="690">
-            <tr>
-                <td width="500" valign="top">
-                    <table class="box-shadow" border="3" cellpadding="10" cellspacing="5" width="500">
-                        <tr>
 
-                            <td width="500" valign="top" class="content">
-                                <div align="center">
-                                    <a href="index.html"><img class="logo" src="logo.png" width="72" height="72" border="0" alt="Logo"></a> <h1 style="color:#34a500;font-family:verdana;" ";><b>Thumbnail Finder</b></h1>
-                                    <span class="black"><p2 style="color:#bc9600;font-family:arial;font-size:19;" ";><b>Find a YouTube video's thumbnail with no extra work!</b></h1></span>
-                                </div>
+                </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="footer medium" style="color: black; font-family: Arial, sans-serif;">
+            <p2 style="text-align:center;">Copyright <i class="fa fa-copyright"></i> Alan Ray D'souza 2018 | Photo by Lance Anderson on Unsplash</p2>
+        </div>
+    </body>
 
-                                <!-- Main data -->
-
-                                <noscript>
-                                    <blockquote>
-                                        <p>
-                                            <font size="3" face="arial" color="#FF0000"><b>You do not have JavaScript enabled.</b></font><br>
-                                            <font size="2" face="arial" color="#000080">The script on this site require the use of JavaScript so enable it before continuing, or the website will not function as intended.</font>
-                                        </p>
-                                    </blockquote>
-                                </noscript>
-
-                                <p>&nbsp;</p>
-                                <form name="form1">
-                                    <div align="center">
-                                    
-                                            <table class="box-shadow" border="1" cellpadding="8 cellspacing="1">
-                                                <tr>
-                                                    <td align="center">Video link:<br><input type="text" name="link1" size="50"><br><input type="button" value="Create Links" onClick="parse1(this.form)"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center">
-                                                        Result<br><br>Max Res [maxresdefault.jpg]<input type="text" name="result1" size="50" maxlength="40" id="result1" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result1')">
-                                                        <br><br>Standard Definition (640x480) [sddefault.jpg]<input type="text" name="result2" size="50" maxlength="40" id="result2" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result2')">
-                                                        <br><br>High Quality (480x360) [hqdefault.jpg]<input type="text" name="result3" size="50" maxlength="40" id="result3" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result3')">
-                                                        <br><br>Medium Quality (320x180) [mqdefault.jpg]<input type="text" name="result4" size="50" maxlength="40" id="result4" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result4')">
-                                                        <br><br>Default (120x90) [default.jpg]<input type="text" name="result5" size="50" maxlength="40" id="result5" READONLY><br><input type="button" value="Go to Link" onClick="openLink('result5')">
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        
-                                    </div>
-                                </form>
-
-                                <!-- Center Bottom -->
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="500">
-                        <tr>
-                            <td width="500" valign="top" class="content">
-                            
-                                    <p>&nbsp;</p>
-                                    <p>&nbsp;</p>
-
-                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                    <!-- Homepage Bottom -->
-                                    <ins class="adsbygoogle"
-                                         style="display:inline-block;width:320px;height:100px"
-                                         data-ad-client="ca-pub-2567231794200405"
-                                         data-ad-slot="6161957371"></ins>
-                                    <script>
-                                        (adsbygoogle = window.adsbygoogle || []).push({});
-                                    </script>
-
-                                
-                                <!-- End Center Bottom -->
-
-                            </td>
-                        </tr>
-                    </table>
-
-                </td>
-
-                <td width="5" bgcolor="#777777" valign="top"><img src="spacer.gif" width="1" height="2" alt="" border="0"></td>
-
-                <td width="190" valign="top" class="rightside">
-                    <!-- Right side Start -->
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td align="center" id="rcontainer"><br>Bookmark this page! It may come in handy.<br><br>Thanks for visiting!<br><br><input type="button" id="darkmode-button" value="Toggle dark mode" onClick="switchDarkMode()"></td>
-                        </tr>
-                    </table>
-
-                    <script>
-
-</div >
-
-<!--Bottom Right-- ->
-                                <table border="0" cellpadding="5" cellspacing="0" width="690">
-                                    <td width="250" height="17" align="right" class="footer">&copy; Copyright 2017-2017 <a href="/">Alan Ray D'souza</a>.</td>
-</tr>
-
-                                <br>
-
-</body >
-</html >
+</html>
