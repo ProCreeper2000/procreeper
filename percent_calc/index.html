@@ -15,26 +15,25 @@
 
         <script>
             function calc1(form) {
-                a = form.a.value / 100;
-                b = a * form.b.value;
+                a = form.number11.value / 100;
+                b = a * form.number12.value;
                 form.total1.value = b;
             }
 
             function calc2(form) {
-                a = form.c.value;
-                b = (a / form.d.value) * 100;
-                form.total2.value = b;
+                a = (form.number21.value / form.number22.value) * 100;
+                form.total2.value = a + "%";
             }
 
             function calc3(form) {
-                a = form.e.value; //A = old num B = new num
-                b = form.f.value;
+                a = form.number31.value; //A = old num B = new num
+                b = form.number32.value;
                 if (a - b < 0) {
                     c = ((b - a) / a) * 100;
                 } else {
                     c = ((a - b) / a) * 100;
                 }
-                form.total3.value = c;
+                form.total3.value = c + "%";
             }
         </script>
     </head>
@@ -58,29 +57,51 @@
             <table style="width:85%">
                 <tr>
                     <td>
-                        <p>What is <input type="text" name="a" size="12"> % of <input type="text" name="b" size="12">?</p><input type="button" class="button1" value="Calculate" onClick="calc1(this.form)">
+                        <p>
+                            What is <input type="number" name="number11" style="width: 140px">
+                            % of <input type="number" name="number12" style="width: 140px; margin-bottom:5px;">?<br>
+                            <input type="button" class="button1" value="Calculate" onClick="calc1(this.form)">
+                        </p>
                     </td>
 
                     <td>
-                        <p>Answer<br><input type="text" name="total1" size="15" maxlength="40" READONLY></p>
+                        <p>
+                            Answer<br>
+                            <input type="text" name="total1" size="15" maxlength="40" READONLY>
+                        </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p><input type="text" name="c" size="12"> is what percent of <input type="text" name="d" size="12">?</p><input type="button" class="button1" value="Calculate" onClick="calc2(this.form)">
+                        <p>
+                            <input type="number" name="number21" style="width: 140px"> is what percent of
+                            <input type="number" name="number22" style="width: 140px; margin-bottom:5px;">?<br>
+                            <input type="button" class="button1" value="Calculate" onClick="calc2(this.form)">
+                        </p>
                     </td>
 
                     <td>
-                        <p>Answer<br><input type="text" name="total2" size="15" maxlength="40" READONLY></p>
+                        <p>
+                            Answer<br>
+                            <input type="text" name="total2" size="15" maxlength="40" READONLY>
+                        </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p>What is the percentage increase/decrease from <input type="text" name="e" size="12"> to <br><input type="text" name="f" size="12">?</p><input type="button" class="button1" value="Calculate" onClick="calc3(this.form)">
+                        <p>
+                            What is the percentage increase/decrease from
+                            <input type="number" name="number31" style="width: 140px"> to <br>
+                            <input type="number" name="number32" style="width: 140px; margin-bottom:5px;">?<br>
+                            <input type="button" class="button1" value="Calculate" onClick="calc3(this.form)">
+                        </p>
                     </td>
 
                     <td>
-                        <p>Answer<br><input type="text" name="total3" size="15" maxlength="40" READONLY></p>
+                        <p>
+                            Answer<br>
+                            <input type="text" name="total3" size="15" maxlength="40" READONLY>
+                        </p>
                     </td>
                 </tr>
             </table>
