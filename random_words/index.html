@@ -38,13 +38,22 @@
         function generateChars(form) {
             var result = "";
             var num = form.number2.value;
-            var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var str = "";
+
+            if (!form.lowercase.checked && !form.capitals2.checked && !form.numbers.checked && !form.symbols.checked)
+                return alert("You must choose at least one type of character to include! (Lowercase, uppercase, numbers or symbols.)");
+
+            if (form.lowercase.checked)
+                str += "abcdefghijklmnopqrstuwxyz";
+
+            if (form.capitals2.checked)
+                str += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             if (form.numbers.checked)
                 str += "0123456789";
 
             if (form.symbols.checked)
-                str += '!"#$%&\'()*+,-./0123456789:;<=>?@[\\]^_`{|}~';
+                str += '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
             var chars = str.split("");
 
@@ -58,8 +67,6 @@
                 if (form.space.checked)
                     result += " ";
             }
-            if (!form.capitals2.checked)
-                result = result.toLowerCase();
 
             form.result2.value = result;
         }
@@ -87,7 +94,7 @@
                     <td>
                         <p>
                             Amount of words: <input type="number" name="number1" size="5"><br>
-                            <input type="checkbox" name="capitals1" value="capital"> CAPITAL letters?<br>
+                            <input type="checkbox" name="capitals1" value="capital"> UPPERCASE letters?<br>
                             <input type="button" class="button1" value="Generate" onClick="generateWords(this.form)">
                         </p>
                     </td>
@@ -102,7 +109,8 @@
                     <td>
                         <p>
                             Amount of letters: <input type="number" name="number2" size="5"><br>
-                            <input type="checkbox" name="capitals2" value="capital" checked> CAPITAL letters?<br>
+                            <input type="checkbox" name="lowercase" value="capital"> Include lowercase?<br>
+                            <input type="checkbox" name="capitals2" value="capital" checked> Include UPPERCASE?<br>
                             <input type="checkbox" name="space" value="space"> S p a c e in between?<br>
                             <input type="checkbox" name="numbers" value="number"> Include numbers?<br>
                             <input type="checkbox" name="symbols" value="symbol"> Include symbols?<br>
