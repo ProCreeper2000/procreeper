@@ -25,7 +25,7 @@
             var gr = form.green.value;
             var bl = form.blue.value;
 
-            if (!re || re == null || !gr || gr == null || !bl || bl == null)
+            if (!re || re == null || !gr || gr == null || !bl || bl == null) return alert("You can't have no RGB value. Change it to 0.");
             if (re > 255 || gr > 255 || bl > 255) return alert("So an RGB value more than 255, huh? Really strange...");
             if (re < 0 || gr < 0 || bl < 0) return alert("So an RGB value less than 0, huh? Really strange...");
 
