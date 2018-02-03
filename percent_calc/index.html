@@ -9,51 +9,62 @@
     <meta name="keywords" content="percent, percentage, calculate, %, calculator, calc">
     <meta name="author" content="Alan Ray D'sousa">
 
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-        <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        <script>
-            function calc1(form) {
-                a = form.number11.value / 100;
-                b = a * form.number12.value;
-                form.total1.value = b;
+        gtag('config', 'UA-111410202-1');
+    </script>
+
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+    <script>
+        function calc1(form) {
+            a = form.number11.value / 100;
+            b = a * form.number12.value;
+            form.total1.value = b;
+        }
+
+        function calc2(form) {
+            a = (form.number21.value / form.number22.value) * 100;
+            form.total2.value = a + "%";
+        }
+
+        function calc3(form) {
+            a = form.number31.value; //A = old num B = new num
+            b = form.number32.value;
+            if (a - b < 0) {
+                c = ((b - a) / a) * 100;
+            } else {
+                c = ((a - b) / a) * 100;
             }
-
-            function calc2(form) {
-                a = (form.number21.value / form.number22.value) * 100;
-                form.total2.value = a + "%";
-            }
-
-            function calc3(form) {
-                a = form.number31.value; //A = old num B = new num
-                b = form.number32.value;
-                if (a - b < 0) {
-                    c = ((b - a) / a) * 100;
-                } else {
-                    c = ((a - b) / a) * 100;
-                }
-                form.total3.value = c + "%";
-            }
-        </script>
-    </head>
+            form.total3.value = c + "%";
+        }
+    </script>
+</head>
 
 
-    <body>
-        <div class="nav-left header">
-            <a class=nav-item href="/" style="color: white;"><p> Home </p></a>
-        </div>
-        <div style="text-align:center; color:white;">
-            <br><br><br>
-            <!--<a href="/"> <img src="logo.png" alt="Logo" class="logo"></a>-->
-            <br>
-            <h1> Percentage Calculator </h1>
-        </div>
+<body>
+    <div class="nav-left header">
+        <a class=nav-item href="/" style="color: white;"><p> Home </p></a>
+    </div>
+    <div style="text-align:center; color:white;">
         <br><br><br>
-        <div class="medium">
-            <br>
+        <!--<a href="/"> <img src="logo.png" alt="Logo" class="logo"></a>-->
+        <br>
+        <h1> Percentage Calculator </h1>
+    </div>
+    <br><br><br>
+    <div class="medium">
+        <br>
 
-            <form name="form1">
+        <form name="form1">
             <table style="width:85%" align="center">
                 <tr>
                     <td>
@@ -105,14 +116,14 @@
                     </td>
                 </tr>
             </table>
-                </form>
+        </form>
 
 
-        </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="footer" style="color: black; text-align: center;">
-            <p2 style="text-align:center;">Copyright <i class="fa fa-copyright"></i> Alan Ray D'souza 2018 | Photo by Lance Anderson on Unsplash</p2>
-        </div>
-    </body>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer" style="color: black; text-align: center;">
+        <p2 style="text-align:center;">Copyright <i class="fa fa-copyright"></i> Alan Ray D'souza 2018 | Photo by Lance Anderson on Unsplash</p2>
+    </div>
+</body>
 
 </html>

@@ -9,6 +9,17 @@
     <meta name="keywords" content="length, unit, convert, to, temperature, degrees, area, volume, liquid, weight, mile, yard, foot, inch, km, m, cm, mm, kilometer, meter, centimeter, millimeter">
     <meta name="author" content="Alan Ray D'sousa">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111410202-1');
+    </script>
+
+
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
@@ -96,7 +107,7 @@
             if (source == "ce") {
                 fahrenheit.value = (celsius.value * 1.8) + 32;
                 kelvin.value = celsius.value * 1 + 273.15; //Multiply by 1 to convert datatype
-        }
+            }
             if (source == "fa") {
                 celsius.value = (fahrenheit.value - 32) / 1.8;
                 kelvin.value = ((fahrenheit.value - 32) / 1.8) + 273.15;

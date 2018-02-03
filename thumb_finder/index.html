@@ -9,100 +9,111 @@
     <meta name="keywords" content="youtube, thumbnail, thumb, finder, calculator, thumbnail link, link, linker">
     <meta name="author" content="Alan Ray D'sousa">
 
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-        <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111410202-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        <script>
-            function parse1(form) {
-                url = form.link1.value;
+        gtag('config', 'UA-111410202-1');
+    </script>
 
-                if (url == null || !url) { return alert("Wow, that's a nice video... nothing!"); }
 
-                var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-                var match = url.match(regExp);
-                if (match == null || !match) { return alert('Invalid URL!'); }
-                var video_id = match[2];
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
-                if (video_id.length === 11) {
-                    video_id = 'https://img.youtube.com/vi/' + video_id
-                    form.result1.value = video_id + '/maxresdefault.jpg';
-                    form.result2.value = video_id + '/sddefault.jpg';
-                    form.result3.value = video_id + '/hqdefault.jpg';
-                    form.result4.value = video_id + '/mqdefault.jpg';
-                    form.result5.value = video_id + '/default.jpg';
-                } else {
-                    return alert('Invalid URL!');
-                }
+    <script>
+        function parse1(form) {
+            url = form.link1.value;
+
+            if (url == null || !url) { return alert("Wow, that's a nice video... nothing!"); }
+
+            var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            var match = url.match(regExp);
+            if (match == null || !match) { return alert('Invalid URL!'); }
+            var video_id = match[2];
+
+            if (video_id.length === 11) {
+                video_id = 'https://img.youtube.com/vi/' + video_id
+                form.result1.value = video_id + '/maxresdefault.jpg';
+                form.result2.value = video_id + '/sddefault.jpg';
+                form.result3.value = video_id + '/hqdefault.jpg';
+                form.result4.value = video_id + '/mqdefault.jpg';
+                form.result5.value = video_id + '/default.jpg';
+            } else {
+                return alert('Invalid URL!');
             }
+        }
 
-            function openLink(a) {
-                elemA = document.getElementById(a)
-                if (elemA.value.length != 0) {
-                    window.open(elemA.value)
-                }
+        function openLink(a) {
+            elemA = document.getElementById(a)
+            if (elemA.value.length != 0) {
+                window.open(elemA.value)
             }
-        </script>
-    </head>
+        }
+    </script>
+</head>
 
 
-    <body>
-        <div class="nav-left header">
-            <a class=nav-item href="/" style="color: white;"><p> Home </p></a>
-        </div>
-        <div style="text-align:center; color:white;">
-            <br><br><br>
-            <!--<a href="/"> <img src="logo.png" alt="Logo" class="logo"></a>-->
-            <br>
-            <h1> Thumbnail Finder </h1>
-        </div>
+<body>
+    <div class="nav-left header">
+        <a class=nav-item href="/" style="color: white;"><p> Home </p></a>
+    </div>
+    <div style="text-align:center; color:white;">
         <br><br><br>
-                <div class="medium">
-                    <br>
+        <!--<a href="/"> <img src="logo.png" alt="Logo" class="logo"></a>-->
+        <br>
+        <h1> Thumbnail Finder </h1>
+    </div>
+    <br><br><br>
+    <div class="medium">
+        <br>
 
-                    <form name="form1">
-                        <table style="width:85%" align="center">
-                            <tr>
-                                <td>
-                                    <p>Video link:<input type="text" name="link1" size="50"></p><input type="button" class="button1" value="Get Link" onClick="parse1(this.form)">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Max Res [maxresdefault.jpg] <input type="text" name="result1" size="50" maxlength="40" id="result1" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result1')"></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Standard Definition (640x480) [sddefault.jpg] <input type="text" name="result2" size="50" maxlength="40" id="result2" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result2')"></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>High Quality (480x360) [hqdefault.jpg] <input type="text" name="result3" size="50" maxlength="40" id="result3" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result3')"></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Medium Quality (320x180) [mqdefault.jpg] <input type="text" name="result4" size="50" maxlength="40" id="result4" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result4')"></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Default (120x90) [default.jpg]<input type="text" name="result5" size="50" maxlength="40" id="result5" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result5')"></p>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+        <form name="form1">
+            <table style="width:85%" align="center">
+                <tr>
+                    <td>
+                        <p>Video link:<input type="text" name="link1" size="50"></p><input type="button" class="button1" value="Get Link" onClick="parse1(this.form)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Max Res [maxresdefault.jpg] <input type="text" name="result1" size="50" maxlength="40" id="result1" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result1')"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Standard Definition (640x480) [sddefault.jpg] <input type="text" name="result2" size="50" maxlength="40" id="result2" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result2')"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>High Quality (480x360) [hqdefault.jpg] <input type="text" name="result3" size="50" maxlength="40" id="result3" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result3')"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Medium Quality (320x180) [mqdefault.jpg] <input type="text" name="result4" size="50" maxlength="40" id="result4" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result4')"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Default (120x90) [default.jpg]<input type="text" name="result5" size="50" maxlength="40" id="result5" READONLY><br><input type="button" class="button1" value="Go to Link" onClick="openLink('result5')"></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
 
 
 
 
-                </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="footer" style="color: black; text-align: center;">
-            <p2 style="text-align:center;">Copyright <i class="fa fa-copyright"></i> Alan Ray D'souza 2018 | Photo by Lance Anderson on Unsplash</p2>
-        </div>
-    </body>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer" style="color: black; text-align: center;">
+        <p2 style="text-align:center;">Copyright <i class="fa fa-copyright"></i> Alan Ray D'souza 2018 | Photo by Lance Anderson on Unsplash</p2>
+    </div>
+</body>
 
 </html>
