@@ -19,6 +19,49 @@
         gtag('config', 'UA-111410202-1');
     </script>
 
+    <style>
+        @media (min-width:1251px) {
+            .hideonmobile {
+                display: block !important;
+            }
+
+            .showonmobile {
+                display: none !important;
+            }
+
+            .showonsmallmobile {
+                display: none !important;
+            }
+        }
+
+        @media(max-width:1250px) {
+            .showonmobile {
+                display: block !important;
+            }
+
+            .showonsmallmobile {
+                display: none !important;
+            }
+
+            .hideonmobile {
+                display: none !important;
+            }
+        }
+
+        @media(max-width:820px) {
+            .showonmobile {
+                display: none !important;
+            }
+
+            .showonsmallmobile {
+                display: block !important;
+            }
+
+            .hideonmobile {
+                display: none !important;
+            }
+        }
+    </style>
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
