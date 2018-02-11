@@ -20,7 +20,7 @@ define('TWITTER_CARDS', true);
 
 // If you're using this, make sure to put a forward slash before.
 // E.g. "/imageserve" not "imageserve"
-define('IMAGESERVE_DIR', '/imageserve');
+define('IMAGESERVE_DIR', '/image');
 define('TWITTER_HANDLE', '@ProCreeper_2000');
 
 define('APP_NAME', 'ProCreeper2000');
