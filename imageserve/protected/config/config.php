@@ -16,7 +16,7 @@ define('RAW_IMAGE', true);
 define('RAW_IMAGE_LINK', false);
 define('IMAGE_EXTENSION', false);
 
-define('TWITTER_CARDS', false);
+define('TWITTER_CARDS', true);
 
 // If you're using this, make sure to put a forward slash before.
 // E.g. "/imageserve" not "imageserve"
