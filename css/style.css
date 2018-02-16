@@ -311,7 +311,7 @@ table, th, td {
 
 .footer {
     height: auto;
-    width: 100%;
+    width: auto;
     background: white;
     color: black;
     padding: 5px;
