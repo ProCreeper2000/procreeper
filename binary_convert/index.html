@@ -53,7 +53,10 @@
 
 <body>
     <div class="nav-left header">
-        <a class=nav-item href="/" style="color: white;"><p> Home </p></a>
+        <p>
+            <a class=nav-item href="/" style="color: white;">Home</a> |
+            <a class=nav-item href="/privacy.txt" style="color: white;">Privacy Policy</a>
+        </p>
     </div>
     <div style="text-align:center; color:white;">
         <br><br><br>
@@ -70,28 +73,28 @@
                 <tr>
                     <td>
                         <p>
-                            Binary:<br><textarea name="binary1" rows="12" cols="30" placeholder="Your binary here"></textarea><br>
+                            Binary:<br><textarea name="binary1" rows="13" cols="40" placeholder="Your binary here"></textarea><br>
                             <input type="button" class="button1" value="To Text" onClick="binaryToWords(this.form)">
                         </p>
                     </td>
 
                     <td>
                         <p>
-                            Result<br><textarea name="result1" rows="14" cols="40" placeholder="Your ASCII will apper here" READONLY></textarea>
+                            Result<br><textarea name="result1" rows="13" cols="40" placeholder="Your ASCII will apper here" READONLY></textarea>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <p>
-                            ASCII:<br><textarea name="text1" rows="12" cols="30" placeholder="Your ASCII here"></textarea><br>
+                            ASCII:<br><textarea name="text1" rows="13" cols="40" placeholder="Your ASCII here"></textarea><br>
                             <input type="button" class="button1" value="To Binary" onClick="wordsToBinary(this.form)">
                         </p>
                     </td>
 
                     <td>
                         <p>
-                            Result<br><textarea name="result2" rows="14" cols="40" placeholder="Your binary will appear here" READONLY></textarea>
+                            Result<br><textarea name="result2" rows="13" cols="40" placeholder="Your binary will appear here" READONLY></textarea>
                         </p>
                     </td>
                 </tr>
